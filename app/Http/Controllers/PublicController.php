@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ValidateUserRequest;
 
 class PublicController extends Controller
 {
@@ -18,5 +19,4 @@ class PublicController extends Controller
         return redirect()->route('home');
     }
 
-    
 }
