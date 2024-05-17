@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Announcement;
+use App\Models\Category;
 
 class AnnouncementForm extends Component
 {
@@ -13,13 +14,11 @@ class AnnouncementForm extends Component
     public $price;
     public $img;
 
-    public function render()
-    {
-        return view('livewire.announcement-form');
-    }
+    public $category_id = [];
 
     public function save()
     {
+
         Announcement::create([
 
             'title' => $this->title,
@@ -27,10 +26,16 @@ class AnnouncementForm extends Component
             'body' => $this->body,
             'price' => $this->price,
             'user_id' => auth()->user()->id,
+            'category_id' => $this->category_id,
             // 'img' => $this->img,
 
         ]);
 
         $this->reset();
+    }
+
+    public function render()
+    {
+        return view('livewire.announcement-form');
     }
 }

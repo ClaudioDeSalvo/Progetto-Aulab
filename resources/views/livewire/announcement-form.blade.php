@@ -23,6 +23,13 @@
                     <label class="form-label">Img</label>
                     <input wire:model="img" type="file" class="form-control" name="img">
                 </div>
+                <div class="mb-3 form-check">
+                    <select wire:model="category_id">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
 
                 <button type="submit" class="btn btn-primary">Invia</button>
             </form>

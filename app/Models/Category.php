@@ -19,4 +19,9 @@ class Category extends Model
         $this->belongsTo(User::class);
 
     }
+
+    public function announcements(){
+        $this->hasMany(Announcement::class);
+    }
+
 }
