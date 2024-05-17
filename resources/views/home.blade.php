@@ -13,11 +13,10 @@
     <div class="container-fluid my-5">
         <div class="row justify-content-center">
             <div class="col-8 text-center">
-
                 @guest
                     <h2 class="text-center">Accedi per creare un annuncio</h2>
                 @else
-                    <a href="#" class="btn btn-success">crea annuncio</a>
+                    <a href="{{route('announcement.create')}}" class="btn btn-success">crea annuncio</a>
                 @endguest
 
             </div>
