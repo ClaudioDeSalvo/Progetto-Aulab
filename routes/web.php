@@ -7,10 +7,15 @@ use App\Http\Controllers\AnnouncementController;
 
 
 //rotta home
-Route::get('/', [PublicController::class, 'home' ])->name('home');
+Route::get('/', [PublicController::class, 'home'])->name('home');
 
-//User delete
-Route::delete('/users/destroy', [PublicController::class,'userDestroy'])->name('user.destroy');
 
-//Announcement create
-Route::get('/announcement/create', [AnnouncementController::class, 'create' ])->name('announcement.create');
+Route::middleware(['auth'])->group(function () {
+
+    //User delete
+    Route::delete('/users/destroy', [PublicController::class, 'userDestroy'])->name('user.destroy');
+
+    //Announcement create
+    Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
+
+});

@@ -32,6 +32,7 @@ class AnnouncementForm extends Component
         ]);
 
         $this->reset();
+        session()->flash('status', 'Annuncio inserito con successo!');
     }
 
     public function render()

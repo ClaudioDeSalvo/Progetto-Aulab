@@ -1,6 +1,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12">
+
+            @if (session('status'))
+                <div class="alert alert-success" id="session1">
+                    {{ session('status') }}
+                </div>
+            @endif
+
             <form wire:submit.prevent='save' enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
