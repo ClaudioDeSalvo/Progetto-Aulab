@@ -10,7 +10,8 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {{-- all the products --}}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Articoli</a>
+                    <a class="nav-link active" aria-current="page"
+                        href="{{ route('announcement.indexAll') }}">Articoli</a>
                 </li>
                 {{-- DROPDOWN CATEGORIE --}}
                 <li class="nav-item dropdown">
@@ -20,7 +21,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item" href="">{{ $category->name }}</a>
+                            <li><a class="dropdown-item"
+                                    href="{{ route('announcement.index', $category) }}">{{ $category->name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -42,11 +44,6 @@
                             Ciao, {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('announcement.index') }}">Visualizza annunci</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li>
                                 <hr class="dropdown-divider">

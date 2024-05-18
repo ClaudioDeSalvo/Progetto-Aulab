@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -11,13 +12,30 @@ class AnnouncementController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Category $category = null)
     {
-        
-        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->get();
+        $query = Announcement::with('category')->orderBy('created_at', 'desc');
+
+        if ($category) {
+            $categoryId = $category->id; // Assuming a category_id column
+            $query->where('category_id', $categoryId);
+        }
+
+        $announcements = $query->get();
+
         return view('announcements.index', compact('announcements'));
     }
 
+    public function indexAll()
+    {
+        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->get();
+
+
+
+        return view('announcements.index', compact('announcements'));
+    }
+    
+    
     /**
      * Show the form for creating a new resource.
      */
