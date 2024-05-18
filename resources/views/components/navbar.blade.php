@@ -27,7 +27,7 @@
               Ciao, {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="{{route('announcement.index')}}">Visualizza annunci</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><hr class="dropdown-divider"></li>

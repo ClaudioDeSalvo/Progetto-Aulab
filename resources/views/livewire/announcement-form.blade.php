@@ -12,28 +12,28 @@
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Titolo</label>
-                    <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title">
+                    <input wire:model.blur="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title">
                     <div>
                         @error('title') <span class="error bg-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Sottotitolo</label>
-                    <input wire:model="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror" name="subtitle">
+                    <input wire:model.blur="subtitle" type="text" class="form-control @error('subtitle') is-invalid @enderror" name="subtitle">
                     <div>
                         @error('subtitle') <span class="error bg-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Corpo del testo</label>
-                    <textarea class="form-control @error('body') is-invalid @enderror" name="body" wire:model="body" id="" cols="30" rows="10"></textarea>
+                    <textarea class="form-control @error('body') is-invalid @enderror" name="body" wire:model.blur="body" id="" cols="30" rows="10"></textarea>
                     <div>
                         @error('body') <span class="error bg-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Prezzo</label>
-                    <input wire:model="price" type="text" class="form-control @error('price') is-invalid @enderror" name="price">
+                    <input wire:model.blur="price" type="text" class="form-control @error('price') is-invalid @enderror" name="price">
                     <div>
                         @error('price') <span class="error bg-danger">{{ $message }}</span> @enderror
                     </div>

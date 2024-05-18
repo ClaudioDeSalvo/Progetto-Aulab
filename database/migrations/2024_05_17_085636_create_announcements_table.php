@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('subtitle');
             $table->text('body');
             $table->decimal('price', 8, 2);
+            $table->string('img')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('category_id');
