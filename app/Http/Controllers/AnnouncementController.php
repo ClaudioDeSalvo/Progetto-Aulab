@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AnnouncementController extends Controller
 {
@@ -13,6 +14,7 @@ class AnnouncementController extends Controller
     public function index()
     {
         $announcements = Announcement::all();
+        // $announcements = DB::table('announcements')->orderBy('created_at', 'desc');
         return view('announcements.index', compact('announcements'));
     }
 
