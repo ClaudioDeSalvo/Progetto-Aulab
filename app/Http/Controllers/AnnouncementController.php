@@ -13,8 +13,8 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        $announcements = Announcement::all();
-        // $announcements = DB::table('announcements')->orderBy('created_at', 'desc');
+        
+        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->get();
         return view('announcements.index', compact('announcements'));
     }
 
