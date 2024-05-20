@@ -15,6 +15,7 @@
                 <h2>{{ $announcement->title }}</h2>
                 <h5>{{ $announcement->subtitle }}</h5>
                 <p>{{ $announcement->body }}</p>
+                <p>{{ $announcement->price }}</p>
                 <p>{{ $announcement->category->name }}</p>
             </div>
         </div>
