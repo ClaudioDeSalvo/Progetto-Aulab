@@ -1,0 +1,12 @@
+.carousel-img{
+    width: 100;
+    height: 100;
+    object-fit: contain;
+    display: block;
+}
+
+.carousel-imgresize{
+    height: 500px;
+    object-fit: contain;
+    display: block;
+}

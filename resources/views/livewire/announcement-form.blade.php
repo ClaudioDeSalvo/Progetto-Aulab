@@ -40,7 +40,10 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Img</label>
-                    <input wire:model="img" type="file" class="form-control" name="img">                   
+                    <input wire:model="img" type="file" class="form-control @error('img') is-invalid @enderror" name="img">
+                    <div>
+                        @error('img') <span class="error bg-danger">{{ $message }}</span> @enderror
+                    </div>                   
                 </div>
                 <div class="mb-3">
                     <select wire:model="category_id">

@@ -45,6 +45,7 @@ protected $messages = [
         $this->validateOnly($propertyName);
     }
 
+
     public function save()
     {
         $this->validate();
