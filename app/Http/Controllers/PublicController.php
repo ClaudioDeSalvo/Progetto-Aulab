@@ -17,6 +17,15 @@ class PublicController extends Controller
 
     public function userDestroy()
     {
+        $userAnnouncements = Auth::user()->announcements;
+        
+        foreach ($userAnnouncements as $announcements) {
+            $announcements->update([
+                'user_id'=>NULL,
+            ]);
+        }
+        
+
         Auth::user()->delete();
         return redirect()->route('home');
     }

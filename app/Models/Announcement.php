@@ -15,8 +15,8 @@ class Announcement extends Model
         'subtitle',
         'body',
         'price',
-        'user_id',
         'img',
+        'user_id',
         'category_id'
     ];
 
@@ -24,8 +24,8 @@ class Announcement extends Model
         return $this->belongsTo(Category::class);
     }
 
-    
-    
-
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
 }

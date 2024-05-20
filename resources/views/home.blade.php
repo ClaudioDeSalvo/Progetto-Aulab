@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid mt-5 pt-3">
+    <div class="container-fluid ">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="roboto-flex-title">Vendi ciò che vuoi !</h1>
@@ -9,7 +9,7 @@
     </div>
     {{-- crea articolo --}}
 
-    <div class="container-fluid  home-header">
+    <div class="container-fluid home-header">
         <div class="row justify-content-center">
             <div class="col-8 text-center">
                 @guest

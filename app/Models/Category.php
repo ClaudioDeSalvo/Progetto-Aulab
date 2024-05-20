@@ -12,16 +12,8 @@ class Category extends Model
 
     protected $fillable = ['name'];
 
-
-    public function user()
-    {
-
-        $this->belongsTo(User::class);
-
-    }
-
     public function announcements(){
-        $this->hasMany(Announcement::class);
+        return $this->hasMany(Announcement::class);
     }
 
 }
