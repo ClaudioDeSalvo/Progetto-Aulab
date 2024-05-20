@@ -1,32 +1,34 @@
 <x-layout>
 
-    <div class="container-fluid bg-success">
+    <div class="container-fluid mt-5 pt-3">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1>Home page</h1>
-                <h2>sotto titolo home </h2>
+                <h1 class="roboto-flex-title">Vendi ciò che vuoi !</h1>
             </div>
         </div>
     </div>
     {{-- crea articolo --}}
 
-    <div class="container-fluid my-5">
+    <div class="container-fluid  home-header">
         <div class="row justify-content-center">
             <div class="col-8 text-center">
                 @guest
                     <h2 class="text-center">Accedi per creare un annuncio</h2>
                 @else
-                    <a href="{{ route('announcement.create') }}" class="btn btn-success">crea annuncio</a>
+                    <a href="{{ route('announcement.create') }}" class="btn btn-primary">crea annuncio</a>
                 @endguest
 
             </div>
         </div>
     </div>
+
+
+
     {{-- ultimi annunci --}}
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center">Ultimi annunci</h2>
+                <h2 class="text-center mt-5 pt-5 roboto-flex-title">Ultimi annunci</h2>
             </div>
             @if (count($announcements) == 0)
                 <div class="col-12">
@@ -35,7 +37,7 @@
             @elseif (count($announcements) >= 6)
                 @for ($i = 0; $i < 6; $i++)
                     <div class="col-12 col-md-4">
-                        <div class="card my-5 shadow">
+                        <div class="card my-3 mx-1 shadow">
                             <img src="{{ Storage::url($announcements[$i]->img) }}" class="card-img-top img-fluid"
                                 alt="...">
                             <div class="card-body">
@@ -52,7 +54,7 @@
             @else
                 @for ($i = 0; $i < count($announcements); $i++)
                     <div class="col-12 col-md-4">
-                        <div class="card my-5 shadow">
+                        <div class="card my-3 mx-1 shadow">
                             <img src="{{ Storage::url($announcements[$i]->img) }}" class="card-img-top img-fluid"
                                 alt="...">
                             <div class="card-body">

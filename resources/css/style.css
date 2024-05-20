@@ -2,15 +2,85 @@
 
 :root {
 
-    --ligth-green: #20BF55;
-    --prime-blue: #0B4F6C;
-    --second-blue: #01BAEF;
-    --white: #FBFBFF;
-    --grey: #757575;
+    --light-green: #1a9242;
+    --prime-blue: #0e3d7a;
+    --second-blue: #2c95b3;
+    --light-grey: #d3d3d3;
+    --grey: #4e4e4e;
 }
 
-font
+/* FONTS
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 1000 */
 
+.roboto-flex-title {
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
+}
+
+.open-sans-text {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--prime-blue);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo{
+    width: 50px;
+}
+
+/* Body */
+body{
+}
+
+.btn{
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+}
+
+.home-header { 
+    min-height: 500px;
+    overflow: hidden; /* Ensure the content does not overflow out of the container */
+}
+
+.home-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/public/vendita.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: fit;
+    filter: blur(1px); /* Apply the blur filter */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
 
 /* CAROUSEL DETTAGLIO  */
 .carousel-img {
@@ -24,4 +94,9 @@ font
     height: 500px;
     object-fit: contain;
     display: block;
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--light-grey);
 }
