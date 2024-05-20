@@ -4,7 +4,7 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
+            <span>Rimani connesso ai nostri social networks:</span>
         </div>
         <!-- Left -->
 
@@ -42,11 +42,10 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Company name
+                        <i class="fas fa-gem me-3"></i>Prosciutti CRUD
                     </h6>
                     <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
+                        Giovani developer, affettati, bisunti e trasudanti.
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -58,16 +57,19 @@
                         Products
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Angular</a>
+                        <a href="#!" class="text-reset">Html</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">React</a>
+                        <a href="#!" class="text-reset">Css</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Vue</a>
+                        <a href="#!" class="text-reset">Bootstrap</a>
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Laravel</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Livewire</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -76,19 +78,19 @@
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
+                        Link Utili
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Pricing</a>
+                        <a href="#!" class="text-reset">Chi Siamo</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Settings</a>
+                        <a href="#!" class="text-reset">Lavora Con Noi</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Orders</a>
+                        <a href="#!" class="text-reset">Assistenza</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Help</a>
+                        <a href="#!" class="text-reset">Aiuto</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -97,13 +99,13 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                    <p><i class="fas fa-home me-3"></i> Isola di Montecristo , Li 57127, IT</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>
-                        info@example.com
+                        prosciutti-crud@admin.com
                     </p>
-                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    <p><i class="fas fa-phone me-3"></i> + 39 334 567 88</p>
+                    <p><i class="fas fa-print me-3"></i> + 39 234 566 99</p>
                 </div>
                 <!-- Grid column -->
             </div>
@@ -114,8 +116,8 @@
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2021 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="{{route('home')}}">Prosciutti CRUD.com</a>
     </div>
     <!-- Copyright -->
 </footer>

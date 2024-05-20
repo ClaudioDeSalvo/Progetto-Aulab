@@ -1,11 +1,26 @@
-.carousel-img{
+/* PALETTE COLORI */
+
+:root {
+
+    --ligth-green: #20BF55;
+    --prime-blue: #0B4F6C;
+    --second-blue: #01BAEF;
+    --white: #FBFBFF;
+    --grey: #757575;
+}
+
+font
+
+
+/* CAROUSEL DETTAGLIO  */
+.carousel-img {
     width: 100;
     height: 100;
     object-fit: contain;
     display: block;
 }
 
-.carousel-imgresize{
+.carousel-imgresize {
     height: 500px;
     object-fit: contain;
     display: block;
