@@ -3,6 +3,7 @@
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
 
@@ -13,6 +14,12 @@ Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/announcement/show/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
 Route::get('/announcement/index/{category}', [AnnouncementController::class, 'index'])->name('announcement.index');
 Route::get('/announcement/index/', [AnnouncementController::class, 'indexAll'])->name('announcement.indexAll');
+
+// Rotte revisor
+
+Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::patch('/accept/{announcement}', [RevisorController::class, 'accept'])->name('accept');
+Route::patch('/reject/{announcement}', [RevisorController::class, 'reject'])->name('reject');
 
 
 Route::middleware(['auth'])->group(function () {

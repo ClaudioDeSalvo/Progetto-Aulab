@@ -13,78 +13,89 @@
                     <a class="nav-link active" aria-current="page"
                         href="{{ route('announcement.indexAll') }}">Articoli</a>
                 </li>
-                {{-- DROPDOWN CATEGORIE --}}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Categorie
-                    </a>
-                    <ul class="dropdown-menu">
-                        @foreach ($categories as $category)
-                            <li><a class="dropdown-item"
-                                    href="{{ route('announcement.index', $category) }}">{{ $category->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </li>
-                @guest
-                    {{-- register --}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registrati</a>
-                    </li>
-                    {{-- log in --}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Accedi</a>
-                    </li>
-                @else
-                    {{-- user actions --}}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Ciao, {{ Auth::user()->name }}
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                {{-- Sezione Revisor --}}
+                @auth
+                    @if (Auth::user()->is_revisor)
+                        <li class="nav-item">
+                            <a class="nav-link active btn btn-outline success btn-sm position-relative w-sm-25"
+                                href="{{ route('revisor.index') }}">Zona Revisore</a>
+                        </li>
+                    @endif
+                @endauth
 
-                            {{-- logout --}}
-                            <li><a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();document.getElementById('logout-form').submit()">Esci</a>
-                            </li>
-                            <form action="{{ route('logout') }}" class="d-none" id="logout-form" method="POST">
-                                @csrf
-                            </form>
 
-                            <li>
-                                <hr class="dropdown-divider">
+                        {{-- DROPDOWN CATEGORIE --}}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categorie
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach ($categories as $category)
+                                    <li><a class="dropdown-item"
+                                            href="{{ route('announcement.index', $category) }}">{{ $category->name }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        @guest
+                            {{-- register --}}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">Registrati</a>
                             </li>
-                            {{-- delete user --}}
-                            <li><a class="dropdown-item" href="{{ route('user.destroy') }}"
-                                    onclick="event.preventDefault();document.getElementById('form-destroy').submit()">Cancella
-                                    il tuo profilo</a></li>
-                            <form action="{{ route('user.destroy') }}" id="form-destroy" method="POST" class="d-none">
-                                @csrf
-                                @method('delete')
-                            </form>
-                        </ul>
+                            {{-- log in --}}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+                            </li>
+                        @else
+                            {{-- user actions --}}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Ciao, {{ Auth::user()->name }}
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
 
-                    </li>
-                @endguest
-            </ul>
+                                    {{-- logout --}}
+                                    <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();document.getElementById('logout-form').submit()">Esci</a>
+                                    </li>
+                                    <form action="{{ route('logout') }}" class="d-none" id="logout-form" method="POST">
+                                        @csrf
+                                    </form>
+
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    {{-- delete user --}}
+                                    <li><a class="dropdown-item" href="{{ route('user.destroy') }}"
+                                            onclick="event.preventDefault();document.getElementById('form-destroy').submit()">Cancella
+                                            il tuo profilo</a></li>
+                                    <form action="{{ route('user.destroy') }}" id="form-destroy" method="POST" class="d-none">
+                                        @csrf
+                                        @method('delete')
+                                    </form>
+                                </ul>
+
+                            </li>
+                        @endguest
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
