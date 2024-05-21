@@ -14,6 +14,7 @@ Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/announcement/show/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
 Route::get('/announcement/index/{category}', [AnnouncementController::class, 'index'])->name('announcement.index');
 Route::get('/announcement/index/', [AnnouncementController::class, 'indexAll'])->name('announcement.indexAll');
+Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 // Rotte revisor
 
@@ -23,6 +24,7 @@ Route::patch('/reject/{announcement}', [RevisorController::class, 'reject'])->na
 
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('revisor.request');
 
     //User delete
     Route::delete('/users/destroy', [PublicController::class, 'userDestroy'])->name('user.destroy');

@@ -55,8 +55,10 @@
                                     Ciao, {{ Auth::user()->name }}
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li>
+                                    @if (!Auth::user()->is_revisor)
+                                        <li><a class="dropdown-item" href="{{route('revisor.request')}}">Diventa Revisor</a></li>
+                                    @endif                               
+                                    {{-- <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -70,7 +72,7 @@
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
-                                    </li>
+                                    </li> --}}
 
                                     {{-- logout --}}
                                     <li><a class="dropdown-item" href="{{ route('logout') }}"

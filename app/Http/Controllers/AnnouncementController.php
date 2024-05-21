@@ -14,7 +14,7 @@ class AnnouncementController extends Controller
      */
     public function index(Category $category = null)
     {
-        $query = Announcement::with('category')->orderBy('created_at', 'desc');
+        $query = Announcement::where('is_accepted', true)->with('category')->orderBy('created_at', 'desc')->paginate(9);
 
         if ($category) {
             $categoryId = $category->id; // Assuming a category_id column
