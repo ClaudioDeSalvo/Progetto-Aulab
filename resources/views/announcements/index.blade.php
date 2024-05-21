@@ -8,21 +8,21 @@
     </div>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-3">
-                
-                @foreach ($announcements as $announcement)
+            @foreach ($announcements as $announcement)
+                <div class="col-12 col-md-4">
                     <div class="card my-5 shadow">
-                        <img src="{{Storage::url($announcement->img)}}" class="card-img-top img-fluid" alt="...">
+                        <img src="{{ Storage::url($announcement->img) }}" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
-                            <h2 class="card-title">{{$announcement->title}}</h2>
-                            <h5 class="card-title">{{$announcement->subtitle}}</h5>
-                            <p class="card-text">{{$announcement->category->name}}</p>
-                            <p class="card-text">{{$announcement->created_at}}</p>
-                            <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btn-primary">Vai ai dettagli</a>
+                            <h2 class="card-title">{{ $announcement->title }}</h2>
+                            <h5 class="card-title">{{ $announcement->subtitle }}</h5>
+                            <p class="card-text">{{ $announcement->category->name }}</p>
+                            <p class="card-text">{{ $announcement->created_at }}</p>
+                            <a href="{{ route('announcement.show', compact('announcement')) }}"
+                                class="btn btn-primary">Vai ai dettagli</a>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
     </div>
 </x-layout>
