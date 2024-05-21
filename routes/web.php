@@ -9,6 +9,11 @@ use App\Http\Controllers\AnnouncementController;
 //rotta home
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
+//Detail
+Route::get('/announcement/show/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
+Route::get('/announcement/index/{category}', [AnnouncementController::class, 'index'])->name('announcement.index');
+Route::get('/announcement/index/', [AnnouncementController::class, 'indexAll'])->name('announcement.indexAll');
+
 
 Route::middleware(['auth'])->group(function () {
 
@@ -17,8 +22,4 @@ Route::middleware(['auth'])->group(function () {
 
     //Announcement create
     Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
-    Route::get('/announcement/index/', [AnnouncementController::class, 'indexAll'])->name('announcement.indexAll');
-    Route::get('/announcement/index/{category}', [AnnouncementController::class, 'index'])->name('announcement.index');
-    Route::get('/announcement/show/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
-
 });
