@@ -7,6 +7,12 @@
             </div>
         </div>
     </div>
+
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
     {{-- crea articolo --}}
 
     <div class="container-fluid home-header">

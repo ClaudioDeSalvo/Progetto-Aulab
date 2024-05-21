@@ -17,7 +17,7 @@ Route::get('/announcement/index/', [AnnouncementController::class, 'indexAll'])-
 
 // Rotte revisor
 
-Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('IsRevisor')->name('revisor.index');
 Route::patch('/accept/{announcement}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{announcement}', [RevisorController::class, 'reject'])->name('reject');
 
