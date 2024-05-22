@@ -22,7 +22,6 @@ Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('I
 Route::patch('/accept/{announcement}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{announcement}', [RevisorController::class, 'reject'])->name('reject');
 Route::patch('/reset', [RevisorController::class, 'reset'])->name('reset');
-// Route::patch('/reset', [RevisorController::class, 'resetFalse'])->name('resetFalse');
 
 
 Route::middleware(['auth'])->group(function () {

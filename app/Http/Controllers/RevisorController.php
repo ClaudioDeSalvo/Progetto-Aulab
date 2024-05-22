@@ -38,12 +38,6 @@ class RevisorController extends Controller
         $announcement->setAccepted(null);
         return redirect()->back()->with('message', "L'annuncio $announcement->title è stato resettato");
     }
-    // public function resetFalse(){
-    //     $announcement = Announcement::where('is_accepted', false)->orderBy('updated_at', 'desc')->first();
-    //     $announcement->setAccepted(null);
-    //     return redirect()->back()->with('message', "L'annuncio $announcement->title è stato resettato");
-    // }
-
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->route('home')->with('message', 'Hai fatto richiesta come revisore');
