@@ -90,6 +90,5 @@ class AnnouncementController extends Controller
             ->paginate(9);
         return view('announcements.index', ['announcements' => $announcements, 'query' => $query]);
     }
-
     
 }

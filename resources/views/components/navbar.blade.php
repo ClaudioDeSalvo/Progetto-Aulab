@@ -99,25 +99,15 @@
                 @endguest
 
                 {{-- search --}}
-                @if(Route::currentRouteName() == 'announcement.indexAll')
                 <li>
-                    <label for="">cerca in tutti</label>
+                    <label for="">CERCA</label>
                     <form class="d-flex" role="search" action="{{ route('announcement.search') }}" method="GET">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             name="query">
                         <button class="btn btn-outline-success" type="submit">Cerca</button>
                     </form>
                 </li>
-                @elseif(Route::currentRouteName() == 'announcement.index')
-                <li>
-                    <label for="">cerca per categoria</label>
-                    <form class="d-flex" role="search" action="{{ route('announcement.search') }}" method="GET">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                            name="query">
-                        <button class="btn btn-outline-success" type="submit">Cerca</button>
-                    </form>
-                </li>
-                @endif
+
             </ul>
         </div>
     </div>

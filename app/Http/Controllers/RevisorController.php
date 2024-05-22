@@ -36,6 +36,4 @@ class RevisorController extends Controller
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
         return redirect()->route('home')->with('message', "Hai accettato $user->name come revisore");
     }
-
-
 }
