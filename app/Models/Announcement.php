@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Laravel\Scout\Searchable;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -46,6 +47,12 @@ class Announcement extends Model
     public function setAccepted($value)
     {
         $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
+
+    public function setUpdated(){
+        $this->updated_at = Carbon::now();
         $this->save();
         return true;
     }

@@ -19,12 +19,21 @@ class RevisorController extends Controller
 
     public function accept(Announcement $announcement){
         $announcement->setAccepted(true);
+        $announcement->setUpdated();
         return redirect()->back()->with('message', "L'annuncio $announcement->title è stato accettato");
     }
 
     public function reject(Announcement $announcement){
         $announcement->setAccepted(false);
+        $announcement->setUpdated();
         return redirect()->back()->with('error', "L'annuncio $announcement->title è stato rifiutato");
+    }
+
+    public function reset(){
+
+        $announcement = Announcement::where('is_accepted', !null)->orderBy('updated_at', 'desc')->first();
+        $announcement->setAccepted(null);
+        return redirect()->back()->with('message', "L'annuncio $announcement->title è stato resettato");
     }
 
     public function becomeRevisor(){

@@ -21,6 +21,7 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('IsRevisor')->name('revisor.index');
 Route::patch('/accept/{announcement}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{announcement}', [RevisorController::class, 'reject'])->name('reject');
+Route::patch('/reset', [RevisorController::class, 'reset'])->name('reset');
 
 
 Route::middleware(['auth'])->group(function () {

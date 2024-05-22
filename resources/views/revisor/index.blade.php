@@ -58,6 +58,13 @@
                 </div>
             </div>
         @endif
+        @if (App\Models\Announcement::where('is_accepted', !null)->count() > 0)
+            <form action="{{ route('reset', ['announcement' => $announcement_to_check]) }}" method="POST">
+                @csrf
+                @method('PATCH')
+                <button type="submit" class="btn btn-danger">Resetta</button>
+            </form>
+        @endif
     </div>
 
 
