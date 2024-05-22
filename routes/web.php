@@ -13,7 +13,7 @@ Route::get('/', [PublicController::class, 'home'])->name('home');
 //Detail
 Route::get('/announcement/show/{announcement}', [AnnouncementController::class, 'show'])->name('announcement.show');
 Route::get('/announcement/index/{category}', [AnnouncementController::class, 'index'])->name('announcement.index');
-Route::get('/announcement/index/', [AnnouncementController::class, 'indexAll'])->name('announcement.indexAll');
+Route::get('/announcement/indexAll/', [AnnouncementController::class, 'indexAll'])->name('announcement.indexAll');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 // Rotte revisor

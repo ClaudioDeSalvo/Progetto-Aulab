@@ -12,27 +12,25 @@ class AnnouncementController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Category $category = null)
+    public function index(Category $category)
     {
-        $query = Announcement::where('is_accepted', true)->with('category')->orderBy('created_at', 'desc')->paginate(9);
+        // Build the query
+        $query = Announcement::where('is_accepted', true)
+            ->where('category_id', $category->id)
+            ->with('category')
+            ->orderBy('created_at', 'desc');
 
-        if ($category) {
-            $categoryId = $category->id; // Assuming a category_id column
-            $query->where('category_id', $categoryId);
-        }
+        // Paginate the results
+        $announcements = $query->paginate(9);
 
-        $announcements = $query->get();
-
-        return view('announcements.index', compact('announcements'));
+        // Return the view with the paginated announcements
+        return view('announcements.index', ['announcements' => $announcements]);
     }
 
     public function indexAll()
     {
-        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->get();
-
-
-
-        return view('announcements.index', compact('announcements'));
+        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->where('is_accepted', true)->get();
+        return view('announcements.indexAll', compact('announcements'));
     }
 
 
@@ -88,8 +86,8 @@ class AnnouncementController extends Controller
     {
         $query = $request->input('query');
         $announcements = Announcement::search($query)
-        ->where('is_accepted', true)
-        ->paginate(9);
+            ->where('is_accepted', true)
+            ->paginate(9);
         return view('announcements.index', ['announcements' => $announcements, 'query' => $query]);
     }
 }
