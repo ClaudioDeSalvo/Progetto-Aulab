@@ -44,23 +44,6 @@
                 <div class="col-12">
                     <h2 class="text-center">Non ci sono annunci</h2>
                 </div>
-            @elseif (count($announcements) >= 6)
-                @for ($i = 0; $i < 6; $i++)
-                    <div class="col-12 col-md-4">
-                        <div class="card my-3 mx-1 shadow">
-                            <img src="{{ Storage::url($announcements[$i]->img) }}" class="card-img-top img-fluid"
-                                alt="...">
-                            <div class="card-body">
-                                <h2 class="card-title">{{ $announcements[$i]->title }}</h2>
-                                <h5 class="card-title">{{ $announcements[$i]->subtitle }}</h5>
-                                <p class="card-text">{{ $announcements[$i]->category->name }}</p>
-                                <p class="card-text">{{ $announcements[$i]->created_at }}</p>
-                                <a href="{{ route('announcement.show', ['announcement' => $announcements[$i]]) }}"
-                                    class="btn btn-primary">Vai ai dettagli</a>
-                            </div>
-                        </div>
-                    </div>
-                @endfor
             @else
                 @for ($i = 0; $i < count($announcements); $i++)
                     <div class="col-12 col-md-4">

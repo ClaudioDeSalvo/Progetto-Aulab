@@ -29,7 +29,7 @@ class AnnouncementController extends Controller
 
     public function indexAll()
     {
-        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->where('is_accepted', true)->get();
+        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
         return view('announcements.indexAll', compact('announcements'));
     }
 
@@ -90,4 +90,6 @@ class AnnouncementController extends Controller
             ->paginate(9);
         return view('announcements.index', ['announcements' => $announcements, 'query' => $query]);
     }
+
+    
 }
