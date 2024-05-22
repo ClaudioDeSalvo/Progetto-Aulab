@@ -30,8 +30,8 @@ class RevisorController extends Controller
     }
 
     public function reset(){
-        if(Announcement::where('is_accepted', !null)->orderBy('updated_at', 'desc')->first()){
-            $announcement = Announcement::where('is_accepted', !null)->orderBy('updated_at', 'desc')->first();
+        if(Announcement::where('is_accepted', true)->orderBy('updated_at', 'desc')->first()){
+            $announcement = Announcement::where('is_accepted', true)->orderBy('updated_at', 'desc')->first();
         }else{
             $announcement = Announcement::where('is_accepted', false)->orderBy('updated_at', 'desc')->first();
         }

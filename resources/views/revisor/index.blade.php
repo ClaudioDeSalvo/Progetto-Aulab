@@ -60,7 +60,7 @@
         @endif
 
         {{-- Reset button --}}
-        @if ((App\Models\Announcement::where('is_accepted', !null)->count() > 0)||(App\Models\Announcement::count() > 0)&&(App\Models\Announcement::where('is_accepted',false)->count() > 0))
+        @if ((App\Models\Announcement::where('is_accepted', true)->count() > 0)||(App\Models\Announcement::where('is_accepted',false)->count() > 0))
             <form action="{{ route('reset') }}" method="POST">
                 @csrf
                 @method('PATCH')
