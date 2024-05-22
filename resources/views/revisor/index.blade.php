@@ -61,16 +61,15 @@
 
         {{-- Reset button --}}
         @if (App\Models\Announcement::where('is_accepted', !null)->count() > 0)
-            <form action="{{ route('reset', ['announcement' => $announcement_to_check]) }}" method="POST">
+            <form action="{{ route('reset') }}" method="POST">
                 @csrf
                 @method('PATCH')
                 <button type="submit" class="btn btn-danger">Resetta</button>
             </form>
 
-        {{-- @dd((App\Models\Announcement::count() > 0)&&(App\Models\Announcement::where('is_accepted',false)->count() > 0)) --}}
+        
         @elseif((App\Models\Announcement::count() > 0)&&(App\Models\Announcement::where('is_accepted',false)->count() > 0))
-        {{-- @dd(App\Models\Announcement::where('is_accepted',false)->first()) --}}
-            <form action="{{ route('resetFalse') }}" method="POST">
+            <form action="{{ route('reset') }}" method="POST">
                 @csrf
                 @method('PATCH')
                 <button type="submit" class="btn btn-danger">Resetta</button>
