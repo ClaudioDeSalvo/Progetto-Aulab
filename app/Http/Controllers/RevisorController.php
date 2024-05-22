@@ -30,11 +30,7 @@ class RevisorController extends Controller
     }
 
     public function reset(){
-        if(Announcement::where('is_accepted', true)->orderBy('updated_at', 'desc')->first()){
-            $announcement = Announcement::where('is_accepted', true)->orderBy('updated_at', 'desc')->first();
-        }else{
-            $announcement = Announcement::where('is_accepted', false)->orderBy('updated_at', 'desc')->first();
-        }
+        $announcement = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->orderBy('updated_at', 'desc')->first();        
         $announcement->setAccepted(null);
         return redirect()->back()->with('message', "L'annuncio $announcement->title è stato resettato");
     }
