@@ -29,8 +29,8 @@ class Announcement extends Model
             'subtitle' => $this->subtitle,
             'body' => $this->body,
             'price' => $this->price,
-            'user_id' => $this->user_id,
-            'category_id' => $this->category_id,
+            'user' => $this->user,
+            'category' => $this->category,
         ];
     }
 

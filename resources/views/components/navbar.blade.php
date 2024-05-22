@@ -100,7 +100,6 @@
 
                 {{-- search --}}
                 <li>
-                    <label for="">CERCA</label>
                     <form class="d-flex" role="search" action="{{ route('announcement.search') }}" method="GET">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             name="query">
