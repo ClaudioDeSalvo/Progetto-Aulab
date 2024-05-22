@@ -34,8 +34,8 @@ class AnnouncementController extends Controller
 
         return view('announcements.index', compact('announcements'));
     }
-    
-    
+
+
     /**
      * Show the form for creating a new resource.
      */
@@ -82,5 +82,14 @@ class AnnouncementController extends Controller
     public function destroy(Announcement $announcement)
     {
         //
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $announcements = Announcement::search($query)
+        ->where('is_accepted', true)
+        ->paginate(9);
+        return view('announcements.index', ['announcements' => $announcements, 'query' => $query]);
     }
 }

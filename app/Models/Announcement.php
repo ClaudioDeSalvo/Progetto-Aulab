@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Announcement extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
 
     protected $fillable = [
 
@@ -19,6 +20,20 @@ class Announcement extends Model
         'user_id',
         'category_id'
     ];
+
+    public function toSearchableArray()
+    {
+        return[
+            'id'=> $this->id,
+            'title' => $this->title,
+            'subtitle' => $this->subtitle,
+            'body' => $this->body,
+            'price' => $this->price,
+            'user_id' => $this->user_id,
+            'category_id' => $this->category_id,
+        ];
+    }
+
 
     public function category(){
         return $this->belongsTo(Category::class);

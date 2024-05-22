@@ -32,3 +32,6 @@ Route::middleware(['auth'])->group(function () {
     //Announcement create
     Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
 });
+
+// search
+Route::get('/announcement/search', [AnnouncementController::class, 'search'])->name('announcement.search');

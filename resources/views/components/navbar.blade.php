@@ -94,10 +94,16 @@
                                         @method('delete')
                                     </form>
                                 </ul>
-
+                            </li>
+                            <li>
+                                <form class="d-flex" role="search" action="{{route('announcement.search')}}" method="GET">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                                </form>
                             </li>
                         @endguest
                 </ul>
             </div>
         </div>
+
     </nav>
