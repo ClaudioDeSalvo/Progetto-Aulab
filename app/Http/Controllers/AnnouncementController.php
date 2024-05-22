@@ -21,7 +21,7 @@ class AnnouncementController extends Controller
             ->orderBy('created_at', 'desc');
 
         // Paginate the results
-        $announcements = $query->paginate(9);
+        $announcements = $query->paginate(6);
 
         // Return the view with the paginated announcements
         return view('announcements.index', ['announcements' => $announcements]);
@@ -29,7 +29,7 @@ class AnnouncementController extends Controller
 
     public function indexAll()
     {
-        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
+        $announcements = Announcement::with('category')->orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(9);
         return view('announcements.indexAll', compact('announcements'));
     }
 
