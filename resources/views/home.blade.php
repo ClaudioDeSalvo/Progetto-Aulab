@@ -55,6 +55,7 @@
                                 <h5 class="card-title">{{ $announcements[$i]->subtitle }}</h5>
                                 <p class="card-text">{{ $announcements[$i]->category->name }}</p>
                                 <p class="card-text">{{ $announcements[$i]->created_at }}</p>
+                                <p class="card-text">{{ $announcements[$i]->user->name }}</p>
                                 <a href="{{ route('announcement.show', ['announcement' => $announcements[$i]]) }}"
                                     class="btn btn-primary">Vai ai dettagli</a>
                             </div>

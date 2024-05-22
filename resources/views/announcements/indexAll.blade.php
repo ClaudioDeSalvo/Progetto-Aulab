@@ -17,6 +17,7 @@
                             <h5 class="card-title">{{ $announcement->subtitle }}</h5>
                             <p class="card-text">{{ $announcement->category->name }}</p>
                             <p class="card-text">{{ $announcement->created_at }}</p>
+                            <p class="card-text">{{ $announcement->user->name }}</p>
                             <a href="{{ route('announcement.show', compact('announcement')) }}"
                                 class="btn btn-primary">Vai ai dettagli</a>
                         </div>
