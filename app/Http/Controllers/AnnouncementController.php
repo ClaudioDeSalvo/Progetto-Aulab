@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AnnouncementController extends Controller
 {
@@ -80,11 +82,11 @@ class AnnouncementController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('query');
-        
+
         $announcements = Announcement::search($query)
             ->where('is_accepted', true)
             ->paginate(9);
         return view('announcements.index', ['announcements' => $announcements, 'query' => $query]);
     }
-    
+
 }

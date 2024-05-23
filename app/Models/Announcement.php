@@ -5,6 +5,7 @@ namespace App\Models;
 use Laravel\Scout\Searchable;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Announcement extends Model
@@ -17,7 +18,6 @@ class Announcement extends Model
         'subtitle',
         'body',
         'price',
-        'img',
         'user_id',
         'category_id'
     ];
@@ -59,6 +59,11 @@ class Announcement extends Model
 
     public static function toBeRevisedCount(){
         return Announcement::where('is_accepted', null)->count();
+    }
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(Image::class);
     }
 
 }
