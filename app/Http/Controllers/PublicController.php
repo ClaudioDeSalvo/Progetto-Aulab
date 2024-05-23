@@ -30,6 +30,12 @@ class PublicController extends Controller
         return redirect()->route('home');
     }
 
+    public function setLanguage($lang){
+
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
+
 
 
 }

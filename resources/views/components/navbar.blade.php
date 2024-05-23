@@ -107,6 +107,10 @@
                     </form>
                 </li>
 
+                <x-_local lang="it"/>
+                <x-_local lang="en"/>
+                <x-_local lang="es"/>
+
             </ul>
         </div>
     </div>
