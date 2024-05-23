@@ -17,9 +17,9 @@
                 @auth
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a class="nav-link active btn btn-outline success btn-sm position-relative w-sm-25"
+                            <a class="nav-link active btn btn-outline success btn-sm position-relative w-sm-25 text-start"
                                 href="{{ route('revisor.index') }}">Zona Revisore <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
+                                    class="position-absolute top-0 start-18 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
                         </li>
                     @endif
                 @endauth
@@ -59,11 +59,12 @@
                             @if (!Auth::user()->is_revisor)
                                 <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Diventa Revisor</a></li>
                             @endif
-                            {{-- <li>
-                                        <hr class="dropdown-divider">
+                            <li>
+                                        
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('announcement.create') }}">Crea annuncio</a></li>
                                     <li>
+                                        {{-- 
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -76,6 +77,7 @@
                                     </li> --}}
 
                             {{-- logout --}}
+                            <hr class="dropdown-divider">
                             <li><a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();document.getElementById('logout-form').submit()">Esci</a>
                             </li>
@@ -103,7 +105,7 @@
                     <form class="d-flex" role="search" action="{{ route('announcement.search') }}" method="GET">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             name="query">
-                        <button class="btn btn-outline-success" type="submit">Cerca</button>
+                        <button class="btn btn-success" type="submit">Cerca</button>
                     </form>
                 </li>
 
