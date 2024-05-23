@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('path')->nullable();
+            $table->string('path')->nullable()->default('public/img/annunciodefault.jpg');
             $table->unsignedBigInteger('announcement_id')->nullable();
             $table->foreign('announcement_id')->references('id')->on('announcements')->onDelete('cascade');
             $table->timestamps();
