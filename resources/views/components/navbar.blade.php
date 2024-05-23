@@ -19,7 +19,7 @@
                         <li class="nav-item">
                             <a class="nav-link active btn btn-outline success btn-sm position-relative w-sm-25 text-start"
                                 href="{{ route('revisor.index') }}">Zona Revisore <span
-                                    class="position-absolute top-0 start-18 translate-middle badge rounded-pill bg-danger">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
+                                    class="position-absolute top-0 start- translate-middle badge rounded-pill bg-danger">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
                         </li>
                     @endif
                 @endauth
@@ -60,11 +60,11 @@
                                 <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Diventa Revisor</a></li>
                             @endif
                             <li>
-                                        
-                                    </li>
-                                    <li><a class="dropdown-item" href="{{ route('announcement.create') }}">Crea annuncio</a></li>
-                                    <li>
-                                        {{-- 
+
+                            </li>
+                            <li><a class="dropdown-item" href="{{ route('announcement.create') }}">Crea annuncio</a></li>
+                            <li>
+                                {{-- 
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -76,8 +76,8 @@
                                         <hr class="dropdown-divider">
                                     </li> --}}
 
-                            {{-- logout --}}
-                            <hr class="dropdown-divider">
+                                {{-- logout --}}
+                                <hr class="dropdown-divider">
                             <li><a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();document.getElementById('logout-form').submit()">Esci</a>
                             </li>
@@ -99,21 +99,21 @@
                         </ul>
                     </li>
                 @endguest
-
-                {{-- search --}}
-                <li>
-                    <form class="d-flex" role="search" action="{{ route('announcement.search') }}" method="GET">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                            name="query">
-                        <button class="btn btn-success" type="submit">Cerca</button>
-                    </form>
-                </li>
-
-                <x-_local lang="it"/>
-                <x-_local lang="en"/>
-                <x-_local lang="es"/>
-
             </ul>
+
+            {{-- search --}}
+
+            <form class="d-flex mx-3" role="search" action="{{ route('announcement.search') }}" method="GET">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                <button class="btn btn-success" type="submit">Cerca</button>
+            </form>
+
+            <div>
+                <x-_local class="mx-2" lang="it" />
+                <x-_local class="mx-2" lang="en" />
+                <x-_local class="mx-2" lang="es" />
+            </div>
+
         </div>
     </div>
 
