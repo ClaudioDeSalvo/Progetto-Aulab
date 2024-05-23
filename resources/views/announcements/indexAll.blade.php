@@ -11,7 +11,7 @@
             @foreach ($announcements as $announcement)
                 <div class="col-12 col-md-4">
                     <div class="card my-5 shadow">
-                        <img src="{{ Storage::url($announcement->img) }}" class="card-img-top img-fluid" alt="...">
+                        <img src="{{ Storage::url($announcement->images()->first()->path)}}" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
                             <h2 class="card-title">{{ $announcement->title }}</h2>
                             <h5 class="card-title">{{ $announcement->subtitle }}</h5>

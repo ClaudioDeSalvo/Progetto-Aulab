@@ -86,7 +86,7 @@ class AnnouncementForm extends Component
             }
         } else {
             foreach ($this->imgs as $img) {
-                $this->announcement->images()->create(['path' => $img = 'img/annunciodefault.jpg']);
+                $this->announcement->images()->create(['path' => $img->store( '/img/annunciodefault.jpg')]);
             }
         }
         //   $imgPath = $this->img ? $this->img->store('public/img') : 'img/annunciodefault.jpg';
