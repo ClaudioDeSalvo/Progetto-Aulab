@@ -85,11 +85,10 @@ class AnnouncementForm extends Component
                 $this->announcement->images()->create(['path' => $img->store('img', 'public')]);
             }
         } else {
-            foreach ($this->imgs as $img) {
-                $this->announcement->images()->create(['path' => $img->store('public/img/annunciodefault.jpg')]);
-            }
+
+            $this->announcement->images()->create(['path' => 'public/img/annunciodefault.jpg']);
         }
-        //   $imgPath = $this->img ? $this->img->store('public/img') : 'img/annunciodefault.jpg';
+
 
         session()->flash('message', 'Annuncio inserito con successo!');
         $this->reset();
