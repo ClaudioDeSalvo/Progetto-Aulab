@@ -16,7 +16,7 @@ class AnnouncementController extends Controller
     {
         // Build the query
         $query = $category->announcements()->where('is_accepted', true)
-            ->orderBy('created_at', 'desc')->paginate(6);
+            ->orderBy('created_at', 'desc')->paginate(9);
 
         // Return the view with the paginated announcements
         return view('announcements.index', ['announcements' => $query]);

@@ -11,7 +11,7 @@ class PublicController extends Controller
 {
     public function home()
     {
-        $announcements = Announcement::where('is_accepted', true)->with('category')->orderBy('created_at', 'desc')->get();
+        $announcements = Announcement::where('is_accepted', true)->with('category')->orderBy('created_at', 'desc')->paginate(6);
         return view('home' , compact('announcements'));
     }
 
