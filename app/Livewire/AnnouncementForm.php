@@ -89,9 +89,7 @@ class AnnouncementForm extends Component
                 dispatch(new ResizeImage($newImage->path, 300, 300));
             }
         } else {
-            $newImage = $this->announcement->images()->create(['path' => 'public/img/annunciodefault.jpg']);
-            dd($newImage);
-            dispatch(new ResizeImage($newImage->path, 300, 300));
+            $this->announcement->images()->create(['path' => 'public/img/annunciodefault.jpg']);
         }
         File::deleteDirectory(storage_path('/app/livewire-tmp'));
 

@@ -20,9 +20,9 @@
                 <div class="col-md-8">
                     <div class="row justify-content-center">
                         @foreach ($announcement_to_check->images as $key => $image)
-                        {{-- @dd($image->getUrl(300, 300)) --}}
                             <div class="col-6 col-md-4 text-center mb-4">
-                                <img src="{{$image->getUrl(300, 300)}}" alt="Immagine segnaposto"
+                                
+                                <img src="{{ $image->getUrl(300, 300) }}" alt="Immagine segnaposto"
                                     class="img-fluid rounded shadow">
                             </div>
                         @endforeach
@@ -61,7 +61,7 @@
         @endif
 
         {{-- Reset button --}}
-        @if ((App\Models\Announcement::where('is_accepted', true)->orWhere('is_accepted',false)->count() > 0))
+        @if (App\Models\Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->count() > 0)
             <form action="{{ route('reset') }}" method="POST">
                 @csrf
                 @method('PATCH')
@@ -69,10 +69,5 @@
             </form>
         @endif
     </div>
-
-
-
-
-
 
 </x-layout>
