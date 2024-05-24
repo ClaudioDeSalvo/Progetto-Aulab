@@ -98,7 +98,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Invia</button>
+                <button wire:loading.remove type="submit" class="btn btn-primary">Invia</button>
             </form>
         </div>
     </div>
