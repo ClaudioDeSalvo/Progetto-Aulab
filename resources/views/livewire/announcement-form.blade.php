@@ -1,13 +1,13 @@
 <div class="container">
     @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-12">
 
@@ -61,7 +61,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Img</label>
-                    <input wire:model.live="temporary_imgs" multiple type="file"
+                    <input id="imgInput" wire:model.live="temporary_imgs" multiple type="file"
                         class="form-control @error('temporary_imgs.*') is-invalid @enderror" name="img">
                     <div>
                         @error('temporary_imgs.*')
@@ -98,7 +98,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button wire:loading.remove type="submit" class="btn btn-primary">Invia</button>
+                <button id="btnCustom" type="submit" class="btn btn-primary">Invia</button>
             </form>
         </div>
     </div>
