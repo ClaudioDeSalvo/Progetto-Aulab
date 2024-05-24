@@ -4,7 +4,7 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <span>Rimani connesso ai nostri social networks:</span>
+            <span><i class="fa-solid fa-share-nodes"></i>Rimani connesso ai nostri social networks:</span>
         </div>
         <!-- Left -->
 
@@ -57,20 +57,24 @@
                         Products
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Html</a>
+                        <a href="#!" class="text-reset"><i class="fa-brands fa-html5"></i> Html</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Css</a>
+                        <a href="#!" class="text-reset"><i class="fa-brands fa-css3"></i> Css</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Bootstrap</a>
+                        <a href="#!" class="text-reset"><i class="fa-brands fa-js"></i> Javascrip</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Laravel</a>
+                        <a href="#!" class="text-reset"><i class="fa-brands fa-bootstrap"></i> Bootstrap</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Livewire</a>
+                        <a href="#!" class="text-reset"><i class="fa-brands fa-laravel"></i> Laravel</a>
                     </p>
+                    <p>
+                        <a href="#!" class="text-reset"><i class="fa-brands fa-github"></i> Git Hub</a>
+                    </p>
+                    
                 </div>
                 <!-- Grid column -->
 

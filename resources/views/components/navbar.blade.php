@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-        {{-- home --}}
+        {{-- HOME --}}
         <a class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
                     <a class="nav-link active" aria-current="page"
                         href="{{ route('announcement.indexAll') }}">Articoli</a>
                 </li>
-                {{-- Sezione Revisor --}}
+                {{-- SEZIONI REVISOR --}}
                 @auth
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
@@ -23,8 +23,6 @@
                         </li>
                     @endif
                 @endauth
-
-
                 {{-- DROPDOWN CATEGORIE --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -60,7 +58,6 @@
                                 <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Diventa Revisor</a></li>
                             @endif
                             <li>
-
                             </li>
                             <li><a class="dropdown-item" href="{{ route('announcement.create') }}">Crea annuncio</a></li>
                             <li>
@@ -75,8 +72,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li> --}}
-
-                                {{-- logout --}}
+                                {{-- LOGOUT USER --}}
                                 <hr class="dropdown-divider">
                             <li><a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();document.getElementById('logout-form').submit()">Esci</a>
@@ -84,11 +80,10 @@
                             <form action="{{ route('logout') }}" class="d-none" id="logout-form" method="POST">
                                 @csrf
                             </form>
-
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            {{-- delete user --}}
+                            {{-- DELETE USER --}}
                             <li><a class="dropdown-item" href="{{ route('user.destroy') }}"
                                     onclick="event.preventDefault();document.getElementById('form-destroy').submit()">Cancella
                                     il tuo profilo</a></li>
@@ -100,20 +95,16 @@
                     </li>
                 @endguest
             </ul>
-
-            {{-- search --}}
-
+            {{-- SEARCH ZONE --}}
             <form class="d-flex mx-3" role="search" action="{{ route('announcement.search') }}" method="GET">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
                 <button class="btn btn-success" type="submit">Cerca</button>
             </form>
-
             <div>
                 <x-_local class="mx-2" lang="it" />
                 <x-_local class="mx-2" lang="en" />
                 <x-_local class="mx-2" lang="es" />
             </div>
-
         </div>
     </div>
 

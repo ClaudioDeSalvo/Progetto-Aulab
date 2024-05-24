@@ -19,3 +19,6 @@ In questo readme inseriamo tutte le info utili che ci possono servire alla creaz
 
 <!-- !!!!!CATEGORIE!!!!! -->
 [ ‘Sport e viaggi’  ,  ‘Cinema e serie tv’ ,  ‘Casa, arredamento e bricolage’ , ‘Gastronomia’ , ‘Videogames e console’ , ‘Abbigliamento’ , ‘Telefonia’ , ‘Arte e Antiquariato’ , ‘Motori’ , ‘Bellezza e salute’  ]
+
+
+

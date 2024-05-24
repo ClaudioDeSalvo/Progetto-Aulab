@@ -19,12 +19,13 @@
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
                     <div class="row justify-content-center">
-                        @for ($i = 0; $i < 6; $i++)
+                        @foreach ($announcement_to_check->images as $image)
                             <div class="col-6 col-md-4 text-center mb-4">
-                                <img src="https://picsum.photos/300" alt="Immagine segnaposto"
+                               
+                                <img src="{{ Storage::url($image->path)}}" alt="Immagine segnaposto"
                                     class="img-fluid rounded shadow">
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
             </div>
