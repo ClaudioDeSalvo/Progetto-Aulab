@@ -19,10 +19,10 @@
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
                     <div class="row justify-content-center">
-                        @foreach ($announcement_to_check->images as $image)
+                        @foreach ($announcement_to_check->images as $key => $image)
+                        {{-- @dd($image->getUrl(300, 300)) --}}
                             <div class="col-6 col-md-4 text-center mb-4">
-                               
-                                <img src="{{ Storage::url($image->path)}}" alt="Immagine segnaposto"
+                                <img src="{{$image->getUrl(300, 300)}}" alt="Immagine segnaposto"
                                     class="img-fluid rounded shadow">
                             </div>
                         @endforeach
