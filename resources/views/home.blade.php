@@ -48,7 +48,7 @@
                 @for ($i = 0; $i < count($announcements); $i++)
                     <div class="col-12 col-md-4">
                         <div class="card my-3 mx-1 shadow">
-                            <img src="{{ Storage::url($announcements[$i]->images()->first()->path) }}" class="card-img-top img-fluid"
+                            <img src="{{$announcements[$i]->images()->first()->getUrl(300, 300)}}" class="card-img-top "
                                 alt="...">
                             <div class="card-body">
                                 <h2 class="card-title">{{ $announcements[$i]->title }}</h2>
