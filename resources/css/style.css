@@ -50,10 +50,11 @@
     z-index: 2;
 }
 
-.logo{
+.logo {
     width: 50px;
 }
-.btnlocal{
+
+.btnlocal {
     padding: 0;
     margin: 0;
     border: 0;
@@ -62,18 +63,19 @@
 
 
 /* Body */
-body{
+body {
     margin-top: 70px;
 }
 
-.btn{
+.btn {
     background-color: var(--light-green);
     border-color: var(--light-green);
 }
 
-.home-header { 
+.home-header {
     min-height: 500px;
-    overflow: hidden; /* Ensure the content does not overflow out of the container */
+    overflow: hidden;
+    /* Ensure the content does not overflow out of the container */
 }
 
 .home-header::before {
@@ -87,8 +89,10 @@ body{
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: fit;
-    filter: blur(1px); /* Apply the blur filter */
-    z-index: -1; /* Ensure the pseudo-element is behind the content */
+    filter: blur(1px);
+    /* Apply the blur filter */
+    z-index: -1;
+    /* Ensure the pseudo-element is behind the content */
 }
 
 /* CAROUSEL DETTAGLIO  */
@@ -106,17 +110,103 @@ body{
 }
 
 /* FOOTER */
-footer{
+footer {
     background-color: var(--light-grey);
 }
 
 
 /* Immagini multiple form */
-.img-preview{
+.img-preview {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 120px;
     height: 120px;
 
+}
+
+/* LOADER SPIN FORM */
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: hsl(0, 0%, 2%);
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -35px;
+    left: -40px;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+
+.loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
 }

@@ -1,13 +1,13 @@
 <div class="container">
     @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-12">
 
@@ -58,11 +58,12 @@
                             <span class="error bg-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                </div>
+                </div> 
                 <div class="mb-3">
                     <label class="form-label">Img</label>
-                    <input wire:model.live="temporary_imgs" multiple type="file"
+                    <input id="imgInput" wire:model.live="temporary_imgs" multiple type="file"
                         class="form-control @error('temporary_imgs.*') is-invalid @enderror" name="img">
+                        
                     <div>
                         @error('temporary_imgs.*')
                             <span class="error bg-danger">{{ $message }}</span>
@@ -71,8 +72,13 @@
                             <span class="error bg-danger">{{ $message }}</span>
                         @enderror
                     </div>
+                    <div id="uploadSwitch" class="row d-none justify-content-center position-relative">
+                        <div class="col-12 col-md-6">
+                            <span  class="loader ms-0"></span>
+                        </div>
+                    </div>
                     @if (!empty($imgs))
-                        <div class="row">
+                        <div id="imgUploaded" class="row">
                             <div class="col-12">
                                 <p>Anteprima foto</p>
                                 <div class="row border border-4 border-success rounded shadow px-4 py-4">
@@ -88,7 +94,6 @@
                                 </div>
                             </div>
                         </div>
-
                     @endif
                 </div>
                 <div class="mb-3">
@@ -98,7 +103,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Invia</button>
+                <button id="btnCustom" type="submit" class="btn btn-primary">Invia</button>
             </form>
         </div>
     </div>
