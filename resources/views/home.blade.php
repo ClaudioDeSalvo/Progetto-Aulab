@@ -11,14 +11,14 @@
     @endif
 
     {{-- LOGO HEADER --}}
-    <div class="container-fluid mb-5">
+    <div class="container-fluid mb-5 sfondoHead">
         <div class="row d-flex flex-column align-items-center">
-            <div class="col-12 align-items-center d-flex justify-content-center">
-                <img src="/storage/img/logo.png" alt="">
+            <div class="col-12 align-items-center d-flex justify-content-center with-blur-backdrop">
+                <img src="/storage/img/logo.png"   alt="">
             </div>
             <div class="col-6 text-center justify-content-center">
-                <h1>Memorabilia Store</h1>
-                <h2>An offer you can't refuse</h2>
+                <h1 class="text-white">Memorabilia Store</h1>
+                <h2 class="text-white">An offer you can't refuse</h2>
             </div>
         </div>
     </div>
