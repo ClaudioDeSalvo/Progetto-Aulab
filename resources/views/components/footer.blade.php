@@ -4,7 +4,7 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <span><i class="fa-solid fa-share-nodes"></i>Rimani connesso ai nostri social networks:</span>
+            <span><i class="fa-solid fa-share-nodes"></i> Rimani connesso ai nostri social networks:</span>
         </div>
         <!-- Left -->
 
@@ -51,50 +51,50 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-start">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Products
+                        Tools
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-brands fa-html5"></i> Html</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-brands fa-html5"></i> Html</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-brands fa-css3"></i> Css</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-brands fa-css3"></i> Css</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-brands fa-js"></i> Javascrip</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-brands fa-js"></i> Javascrip</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-brands fa-bootstrap"></i> Bootstrap</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-brands fa-bootstrap"></i> Bootstrap</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-brands fa-laravel"></i> Laravel</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-brands fa-laravel"></i> Laravel</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset"><i class="fa-brands fa-github"></i> Git Hub</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-brands fa-github"></i> Git Hub</a>
                     </p>
                     
                 </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-start">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         Link Utili
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Chi Siamo</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-regular fa-eye"></i> Chi Siamo</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Lavora Con Noi</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-briefcase"></i> Lavora Con Noi</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Assistenza</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-handshake-angle"></i> Assistenza</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Aiuto</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-info"></i> Aiuto</a>
                     </p>
                 </div>
                 <!-- Grid column -->

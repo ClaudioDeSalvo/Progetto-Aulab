@@ -2,97 +2,120 @@
 
 :root {
 
-    --light-green: #1a9242;
-    --prime-blue: #0e3d7a;
-    --second-blue: #2c95b3;
-    --light-grey: #d3d3d3;
-    --grey: #4e4e4e;
+    --light-cipria: #CB997E;
+    --prime-beige: #DDBEA9;
+    --light-beige: #FFE8D6;
+    --light-greeng: #B7B7A4;
+    --prime-sand: #A5A58D;
+    --second-sand: #514625;
 }
 
-/* FONTS
-<uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 100 to 1000 */
-
-.roboto-flex-title {
-    font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
+/* FONTS */
+@font-face {
+    font-family: 'Market Deco';
     font-style: normal;
-    font-variation-settings:
-        "slnt" 0,
-        "wdth" 100,
-        "GRAD" 0,
-        "XOPQ" 96,
-        "XTRA" 468,
-        "YOPQ" 79,
-        "YTAS" 750,
-        "YTDE" -203,
-        "YTFI" 738,
-        "YTLC" 514,
-        "YTUC" 712;
+    font-weight: 400;
+    src: local('Market Deco'), url('https://fonts.cdnfonts.com/s/4344/Market_Deco.woff') format('woff');
 }
-
-.open-sans-text {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
+/* subtitle */
+@font-face {
+    font-family: 'M PLUS Code Latin';
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-weight: 400;
+    src: local('M PLUS Code Latin'), url('https://fonts.cdnfonts.com/s/107411/MPLUSCodeLatin[wdth,wght].woff') format('woff');
+}
+/* paragraph */
+@font-face {
+    font-family: 'Safilms Crawford';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Safilms Crawford'), url('https://fonts.cdnfonts.com/s/105018/SafilmsCrawford-K7zeD.woff') format('woff');
 }
 
-/* Navbar */
+
+
+
+/* NAVBAR */
 .navbar {
-    background-color: var(--prime-blue);
+    background-color: var(--second-sand);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 2;
 }
 
-.logo {
-    width: 50px;
-}
-
+/* LANGUAGGE FLAGS */
 .btnlocal {
     padding: 0;
     margin: 0;
     border: 0;
-    background-color: #0e3d7a;
+    background-color: var(--second-sand);
 }
 
-
-/* Body */
+/* BODY */
 body {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
-.btn {
-    background-color: var(--light-green);
-    border-color: var(--light-green);
+.page-Bg-color {
+    background-color: var(--light-beige);
 }
 
-.home-header {
-    min-height: 500px;
-    overflow: hidden;
-    /* Ensure the content does not overflow out of the container */
+/* LOGO TITLE-SUBTITLE */
+h1{
+    font-family: 'Market Deco';
+    font-style: normal;
+    font-weight: 400;
+}
+h2{
+    font-family: 'M PLUS Code Latin';
+    font-style: normal;
+    font-weight: 400;
 }
 
-.home-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("/public/vendita.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: fit;
-    filter: blur(1px);
-    /* Apply the blur filter */
-    z-index: -1;
-    /* Ensure the pseudo-element is behind the content */
+/* SEZIONE COLONNA CREA ANNUNCIO H3-P-BTN */
+h3{
+    font-family: 'Safilms Crawford';
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.sectionhome-Btn
+/* BTN CREA ANNUNCIUO */
+.button-74 {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-74:hover {
+    background-color: #fff;
+}
+
+.button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .button-74 {
+        min-width: 120px;
+        padding: 0 25px;
+    }
 }
 
 /* CAROUSEL DETTAGLIO  */
@@ -109,13 +132,7 @@ body {
     display: block;
 }
 
-/* FOOTER */
-footer {
-    background-color: var(--light-grey);
-}
-
-
-/* Immagini multiple form */
+/* IMMAGINI MULTIPLE FORM */
 .img-preview {
     background-position: center;
     background-repeat: no-repeat;
@@ -209,4 +226,13 @@ footer {
     87% {
         box-shadow: .2em -.2em 0 0 currentcolor;
     }
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--prime-sand);
+}
+
+.ancor-Footer{
+    text-decoration: none;
 }

@@ -10,31 +10,35 @@
         </div>
     @endif
 
-    <div class="container-fluid ">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <h1 class="roboto-flex-title">Vendi ciò che vuoi !</h1>
+    {{-- LOGO HEADER --}}
+    <div class="container-fluid mb-5">
+        <div class="row d-flex flex-column align-items-center">
+            <div class="col-12 align-items-center d-flex justify-content-center">
+                <img src="/storage/img/logo.png" alt="">
+            </div>
+            <div class="col-6 text-center justify-content-center">
+                <h1>Memorabilia Store</h1>
+                <h2>I'll make you an offer you won't be able to refuse</h2>
             </div>
         </div>
     </div>
-    {{-- crea articolo --}}
-
-    <div class="container-fluid home-header">
+    {{-- VINYL + BTN SECTION --}}
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-8 text-center">
-                @guest
-                    <h2 class="text-center">Accedi per creare un annuncio</h2>
-                @else
-                    <a href="{{ route('announcement.create') }}" class="btn btn-primary">crea annuncio</a>
-                @endguest
-
+            <div class="col-4 p-0">
+                <img src="/storage/img/vinile_arancio_dx.png" alt="vinile sx">
+            </div>
+            <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center sectionhome-Btn">
+                <div>
+                    <h1>Crea Annuncio</h1>
+                    <p>Clicca qui ecc ecc</p>
+                    <button class="button-74" role="button">Crea Annuncio</button>
+                </div>
             </div>
         </div>
     </div>
 
-
-
-    {{-- ultimi annunci --}}
+    {{-- ULTIMI ANNUNCI --}}
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
@@ -48,8 +52,8 @@
                 @for ($i = 0; $i < count($announcements); $i++)
                     <div class="col-12 col-md-4">
                         <div class="card my-3 mx-1 shadow">
-                            <img src="{{$announcements[$i]->images()->first()->getUrl(300, 300)}}" class="card-img-top img-fluid"
-                                alt="...">
+                            <img src="{{ $announcements[$i]->images()->first()->getUrl(300, 300) }}"
+                                class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
                                 <h2 class="card-title">{{ $announcements[$i]->title }}</h2>
                                 <h5 class="card-title">{{ $announcements[$i]->subtitle }}</h5>
@@ -66,7 +70,4 @@
         </div>
     </div>
     </div>
-
-
-
 </x-layout>
