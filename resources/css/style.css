@@ -2,12 +2,12 @@
 
 :root {
 
-    --light-cipria: #CB997E;
-    --prime-beige: #DDBEA9;
-    --light-beige: #FFE8D6;
-    --light-greeng: #B7B7A4;
-    --prime-sand: #A5A58D;
-    --second-sand: #514625;
+    --light-cipria: #7ceddc;
+    --prime-beige: #68c7c1;
+    --light-beige: #faca78;
+    --light-greeng: #f57f5b;
+    --prime-sand: #dd5341;
+    --second-sand: #794a3a;
 }
 
 /* FONTS */
@@ -80,8 +80,15 @@ h3{
     font-weight: 400;
 }
 
+/* Sezione annuncio */
+.vinileHome{
+    height:650px ;
+}
 
-.sectionhome-Btn
+.backgroundVinile{
+    background-color: var(--prime-sand);
+    border-top: var(--light-cipria);
+}
 /* BTN CREA ANNUNCIUO */
 .button-74 {
     background-color: #fbeee0;
@@ -227,6 +234,16 @@ h3{
         box-shadow: .2em -.2em 0 0 currentcolor;
     }
 }
+
+/* FORM CREAZIONE ANNUNCI */
+.creationForm{
+        background-image: url('/storage/app/public/img/form.png'); 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
 
 /* FOOTER */
 footer {

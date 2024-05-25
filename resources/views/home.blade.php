@@ -18,20 +18,20 @@
             </div>
             <div class="col-6 text-center justify-content-center">
                 <h1>Memorabilia Store</h1>
-                <h2>I'll make you an offer you won't be able to refuse</h2>
+                <h2>An offer you can't refuse</h2>
             </div>
         </div>
     </div>
     {{-- VINYL + BTN SECTION --}}
-    <div class="container-fluid">
+    <div class="container-fluid backgroundVinile">
         <div class="row justify-content-center">
-            <div class="col-4 p-0">
-                <img src="/storage/img/vinile_arancio_dx.png" alt="vinile sx">
+            <div class="col-4 p-0 ">
+                <img src="/storage/img/vinile_arancio_dx.png" alt="vinile sx" class="vinileHome">
             </div>
-            <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center sectionhome-Btn">
+            <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center">
                 <div>
-                    <h1>Crea Annuncio</h1>
-                    <p>Clicca qui ecc ecc</p>
+                    <h1>Crea qui il tuo Annuncio!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequuntur hic aliquam ex perspiciatis est necessitatibus. Soluta deleniti ipsum tenetur accusamus eum libero odit eveniet? Ut porro nobis illo distinctio.</p>
                     <button class="button-74" role="button">Crea Annuncio</button>
                 </div>
             </div>
