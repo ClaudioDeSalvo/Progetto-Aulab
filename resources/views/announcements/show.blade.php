@@ -13,11 +13,12 @@
                 @if ($announcement->images->count() > 0)
                     <div id="carouselExample" class="carousel slide">
                         <div class="carousel-inner">
+                            
                             @foreach ($announcement->images as $key => $image)
                                 <div class="carousel-item @if ($loop->first) active @endif ">
-                                    <img src="{{ Storage::url($image->path) }}"
+                                    <img src="{{ $image->getUrl(300, 300) }}"
                                         alt="Immagine {{ $key + 1 }} dell'annuncio {{ $announcement->title }}"
-                                        class="d-block w-100 rounded shadow img-fluid">
+                                        class="d-block w-100 rounded shadow">
                                 </div>
                             @endforeach
                         </div>
