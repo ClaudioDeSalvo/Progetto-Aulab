@@ -82,7 +82,7 @@
                                 {{-- LOGOUT USER --}}
                                 <hr class="dropdown-divider">
                             <li><a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();document.getElementById('logout-form').submit()">Esci</a>
+                                    onclick="event.preventDefault();document.querySelector('#logout-form').submit()">Esci</a>
                             </li>
                             <form action="{{ route('logout') }}" class="d-none" id="logout-form" method="POST">
                                 @csrf
@@ -92,7 +92,7 @@
                             </li>
                             {{-- DELETE USER --}}
                             <li><a class="dropdown-item" href="{{ route('user.destroy') }}"
-                                    onclick="event.preventDefault();document.getElementById('form-destroy').submit()">Cancella
+                                    onclick="event.preventDefault();document.querySelector('#form-destroy').submit()">Cancella
                                     il tuo profilo</a></li>
                             <form action="{{ route('user.destroy') }}" id="form-destroy" method="POST" class="d-none">
                                 @csrf
