@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pb-4">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -8,8 +8,8 @@
             </ul>
         </div>
     @endif
-    <div class="row justify-content-center">
-        <div class="col-12">
+    <div class="row justify-content-center align-content-center vh-100">
+        <div class="col-12 col-md-8 shadow rounded add-bg-beige">
 
             @if (session('message'))
                 <div class="alert alert-success" id="session1">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Corpo del testo</label>
-                    <textarea class="form-control @error('body') is-invalid @enderror" name="body" wire:model.blur="body" id=""
+                    <textarea class="form-control resizeCustom @error('body') is-invalid @enderror" name="body" wire:model.blur="body" id=""
                         cols="30" rows="10"></textarea>
                     <div>
                         @error('body')

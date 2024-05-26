@@ -14,6 +14,11 @@
     background-color: var(--prime-sand);
 }
 
+.resizeCustom{
+    resize: none;
+    height: 100px;
+}
+
 
 .marginCustom{
     margin-top: 76px;
