@@ -13,7 +13,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {{-- all the products --}}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page"
+                    <a class="nav-link @if(Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
                         href="{{ route('announcement.indexAll') }}">Articoli</a>
                 </li>
                 {{-- SEZIONI REVISOR --}}
@@ -28,7 +28,7 @@
                 @endauth
                 {{-- DROPDOWN CATEGORIE --}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link @if(Route::currentRouteName() == 'announcement.index') active @endif dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Categorie
                     </a>
@@ -43,16 +43,16 @@
                 @guest
                     {{-- register --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registrati</a>
+                        <a class="nav-link @if(Route::currentRouteName() == 'register') active @endif" href="{{ route('register') }}">Registrati</a>
                     </li>
                     {{-- log in --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+                        <a class="nav-link @if(Route::currentRouteName() == 'login') active @endif" href="{{ route('login') }}">Accedi</a>
                     </li>
                 @else
                     {{-- user actions --}}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link @if(Route::currentRouteName() == 'revisor.request'|| Route::currentRouteName() == 'announcement.create') active @endif dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Ciao, {{ Auth::user()->name }}
                         </a>

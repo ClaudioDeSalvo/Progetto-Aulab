@@ -20,7 +20,7 @@
 <body>
     <x-navbar />
 
-    <div class="min-vh-100 page-Bg-color">
+    <div class="@if(Route::currentRouteName() != 'home') marginCustom @endif min-vh-100 page-Bg-color">
         {{ $slot }}
     </div>
 
