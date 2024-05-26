@@ -1,2 +1,6 @@
+/* Bootstrap */
 @import 'bootstrap';
+/* AOS */
+@import 'aos/dist/aos.css';
+/* My style */
 @import './style.css';

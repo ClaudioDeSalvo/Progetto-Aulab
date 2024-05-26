@@ -7,7 +7,7 @@
     --light-beige: #ffcb69;
     --light-greeng: #dde5b6;
     --prime-sand: #f0ead2;
-    --second-sand: #adc178;
+    --second-sand: #007F5F;
 }
 
 /* FONTS */
@@ -33,29 +33,38 @@
 }
 
 
-/* IMMAGINE NAVBAR */
-.imgNav{
-    width: 110px;
-    height: 50px;
-    margin: none;
-    padding: none;
-    margin-left:-10px;
-    margin-right:10px;
-}
 
 /* SFONDO HEADER */
-.sfondoHead{
-    background-image: url('/storage/app/public/img/carta2.png');
+.header{
+    min-height: 600px;
+    background-image: url('/storage/app/public/img/sfondodoggo.jpg');
     border:none;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+.logo-text {
+    color: var(--prime-sand);
+    padding: 1rem 1rem;
+    display: inline-block;
+    border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    letter-spacing: 0.3ch;
+    position: relative;
 
-.with-blur-backdrop{
-    height: inherit
+    &::before {
+        content: '';
+        border: 2px solid #353535;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
 }
-
 
 /* NAVBAR */
 .navbar {
@@ -67,14 +76,31 @@
     /* border: solid 1px black; */
     box-shadow: black;
 }
+/* IMMAGINE NAVBAR */
+.imgNav{
+    width: 110px;
+    height: 50px;
+    margin: none;
+    padding: none;
+    margin-left:-10px;
+    margin-right:10px;
+}
+
 
 /* LANGUAGGE FLAGS */
+.dropdown-custom{
+    --bs-dropdown-min-width: 32px;
+    --bs-dropdown-item-padding-y: 0;
+    --bs-dropdown-item-padding-x: 0;
+    --bs-dropdown-padding-y: 0;
+    --bs-dropdown-padding-x: 0;
+}
 .btnlocal {
-    padding: 0;
-    margin: 0;
-    border: 0;
+    border: none;
     background-color: var(--second-sand);
 }
+
+
 
 /* BODY */
 body {
@@ -113,6 +139,31 @@ h3{
     background-color: var(--prime-sand);
     border-top: var(--light-cipria);
 }
+.card-74{
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: all 0.6s ease;
+    min-width: 500px;
+}
+.card-74:hover{
+    box-shadow: rgba(255, 172, 28, 0.199) -10px 10px, rgba(255, 172, 28, 0.19) -20px 20px ;
+}
+
+
 /* BTN CREA ANNUNCIUO */
 .button-74 {
     background-color: #fbeee0;
@@ -134,7 +185,7 @@ h3{
 }
 
 .button-74:hover {
-    background-color: #fff;
+    background-color: var(--second-sand);
 }
 
 .button-74:active {

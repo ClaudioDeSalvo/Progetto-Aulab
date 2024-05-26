@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark ">
     <div class="container-fluid">
         {{-- HOME --}}
-        {{-- <a class="navbar-brand" href="{{ route('home') }}">Presto.it</a> --}}
-        <img src="/storage/img/logo.png" class="imgNav" alt="">
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="/storage/img/logo.png" class="imgNav" alt="">
+        </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -101,11 +103,18 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
                 <button class="btn btn-success" type="submit">Cerca</button>
             </form>
-            <div>
-                <x-_local class="mx-2" lang="it" />
-                <x-_local class="mx-2" lang="en" />
-                <x-_local class="mx-2" lang="es" />
+
+            <div class="nav-item dropdown lang-item">
+                <a class="nav-divnk dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <x-_local class="mx-2" lang="it" />
+                </a>
+                <ul class="dropdown-menu dropdown-custom">
+                    <li><a class="dropdown-item" href=""><x-_local lang="en" /></a></li>
+                    <li><a class="dropdown-item" href=""><x-_local lang="es" /></a></li>
+                </ul>
             </div>
+
         </div>
     </div>
 
