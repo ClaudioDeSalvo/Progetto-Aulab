@@ -13,7 +13,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {{-- all the products --}}
                 <li class="nav-item">
-                    <a class="nav-link @if(Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
+                    <a class="nav-link @if (Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
                         href="{{ route('announcement.indexAll') }}">Articoli</a>
                 </li>
                 {{-- SEZIONI REVISOR --}}
@@ -28,8 +28,8 @@
                 @endauth
                 {{-- DROPDOWN CATEGORIE --}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link @if(Route::currentRouteName() == 'announcement.index') active @endif dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link @if (Route::currentRouteName() == 'announcement.index') active @endif dropdown-toggle" href="#"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
@@ -43,17 +43,19 @@
                 @guest
                     {{-- register --}}
                     <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'register') active @endif" href="{{ route('register') }}">Registrati</a>
+                        <a class="nav-link @if (Route::currentRouteName() == 'register') active @endif"
+                            href="{{ route('register') }}">Registrati</a>
                     </li>
                     {{-- log in --}}
                     <li class="nav-item">
-                        <a class="nav-link @if(Route::currentRouteName() == 'login') active @endif" href="{{ route('login') }}">Accedi</a>
+                        <a class="nav-link @if (Route::currentRouteName() == 'login') active @endif"
+                            href="{{ route('login') }}">Accedi</a>
                     </li>
                 @else
                     {{-- user actions --}}
                     <li class="nav-item dropdown">
-                        <a class="nav-link @if(Route::currentRouteName() == 'revisor.request'|| Route::currentRouteName() == 'announcement.create') active @endif dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link @if (Route::currentRouteName() == 'revisor.request' || Route::currentRouteName() == 'announcement.create') active @endif dropdown-toggle" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Ciao, {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu">
@@ -105,10 +107,10 @@
             </form>
 
             <div class="nav-item dropdown lang-item">
-                <a class="nav-divnk dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <x-_local class="mx-2" lang="it" />
-                </a>
+                <button class="btnlocal" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{{ asset('vendor/blade-flags/language-' . 'it' . '.svg') }}" alt=""
+                        width="32" height="32" class="" />
+                </button>
                 <ul class="dropdown-menu dropdown-custom">
                     <li><a class="dropdown-item" href=""><x-_local lang="en" /></a></li>
                     <li><a class="dropdown-item" href=""><x-_local lang="es" /></a></li>
