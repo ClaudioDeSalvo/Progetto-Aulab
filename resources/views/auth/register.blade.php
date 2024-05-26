@@ -1,15 +1,15 @@
 <x-layout>
-    <div class="container-fluid bg-success">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1>Registrati</h1>
-                <h2>sotto titolo home </h2>
+                <h2>Unisciti ai venditori!</h2>
             </div>
         </div>
     </div>
     <div class="container-fluid mt-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-4">
+            <div class="col-10 col-md-4 shadow rounded add-bg-beige">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="mb-3">
@@ -32,7 +32,7 @@
                         <input type="checkbox" class="form-check-input" id="remember" name="remember" value="1">
                         <label class="form-check-label" for="exampleCheck1">Ricordami</label>
                     </div> --}}
-                    <button type="submit" class="btn btn-primary">Registrati</button>
+                    <button type="submit" class="button-74 mb-5">Registrati</button>
                 </form>
             </div>
         </div>

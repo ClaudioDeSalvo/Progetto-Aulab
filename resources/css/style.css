@@ -10,6 +10,10 @@
     --second-sand: #5b5a57;
 }
 
+.add-bg-beige{
+    background-color: var(--prime-sand);
+}
+
 
 .marginCustom{
     margin-top: 76px;
@@ -338,9 +342,9 @@ h1{
     /* COLORI PAGINATION*/
     .pagination{
         --bs-pagination-color: var(--second-sand);
-        --bs-pagination-bg: var(--light-greeng);
+        --bs-pagination-bg: var(--prime-sand);
         --bs-pagination-active-bg: var(--second-sand);
-        --bs-pagination-disabled-bg: var(--light-greeng);
+        --bs-pagination-disabled-bg: var(--prime-sand);
     }
 
 /* FOOTER */
