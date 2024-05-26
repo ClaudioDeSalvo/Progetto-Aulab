@@ -339,8 +339,8 @@ h1{
     .pagination{
         --bs-pagination-color: var(--second-sand);
         --bs-pagination-bg: var(--light-greeng);
---bs-pagination-active-bg: var(--second-sand);
---bs-pagination-disabled-bg: var(--light-greeng);
+        --bs-pagination-active-bg: var(--second-sand);
+        --bs-pagination-disabled-bg: var(--light-greeng);
     }
 
 /* FOOTER */

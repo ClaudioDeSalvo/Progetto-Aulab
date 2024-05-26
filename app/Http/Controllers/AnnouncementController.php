@@ -86,7 +86,7 @@ class AnnouncementController extends Controller
         $announcements = Announcement::search($query)
             ->where('is_accepted', true)
             ->paginate(9);
-        return view('announcements.index', ['announcements' => $announcements, 'query' => $query]);
+        return view('announcements.indexSearch', ['announcements' => $announcements, 'query' => $query]);
     }
 
 }
