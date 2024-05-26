@@ -20,9 +20,11 @@
                 @auth
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
-                            <a class="nav-link active btn btn-outline success btn-sm position-relative w-sm-25 text-start"
-                                href="{{ route('revisor.index') }}">Zona Revisore <span
-                                    class="position-absolute top-0 start- translate-middle badge rounded-pill bg-danger">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
+                            <a class="nav-link btn btn-outline success btn-sm position-relative w-sm-25 text-start @if (Route::currentRouteName() == 'revisor.index') active @endif"
+                                href="{{ route('revisor.index') }}">Zona Revisore
+                                <span
+                                    class="position-absolute top-0 start- translate-middle badge rounded-pill bg-danger
+                                @if (\App\Models\Announcement::toBeRevisedCount() <= 0) d-none @endif">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
                         </li>
                     @endif
                 @endauth
