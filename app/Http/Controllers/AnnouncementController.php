@@ -21,7 +21,7 @@ class AnnouncementController extends Controller
             ->orderBy('created_at', 'desc')->paginate(9);
 
         // Return the view with the paginated announcements
-        return view('announcements.index', ['announcements' => $query]);
+        return view('announcements.index', ['announcements' => $query, 'categoryName' => $category->name]);
     }
 
     public function indexAll()

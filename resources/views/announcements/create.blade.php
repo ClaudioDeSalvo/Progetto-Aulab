@@ -1,3 +1,3 @@
 <x-layout>
-<livewire:announcement-form>
+    <livewire:announcement-form>
 </x-layout>

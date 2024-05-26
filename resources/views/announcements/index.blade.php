@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="display-1">Gli annunci</h1>
+                <h1 class="display-1 h1-alt">{{$categoryName}}</h1>
             </div>
         </div>
     </div>
