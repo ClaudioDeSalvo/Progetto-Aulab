@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             @foreach ($announcements as $announcement)
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-3 mx-5 my-3">
                     <div class="card-74" data-aos="fade-up" data-aos-duration="3000"> 
                         <img src="{{ $announcement->images()->first()->getUrl(300, 300) }}" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
