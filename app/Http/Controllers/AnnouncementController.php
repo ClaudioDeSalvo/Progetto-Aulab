@@ -14,14 +14,15 @@ class AnnouncementController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Category $category)
+    public function index(Category $category, $categoryName = null)
     {
         // Build the query
         $query = $category->announcements()->where('is_accepted', true)
             ->orderBy('created_at', 'desc')->paginate(9);
 
+        $categoryName = $category->name;
         // Return the view with the paginated announcements
-        return view('announcements.index', ['announcements' => $query, 'categoryName' => $category->name]);
+        return view('announcements.index', ['announcements' => $query,'categoryName' => $categoryName, 'category' => $category]);
     }
 
     public function indexAll()

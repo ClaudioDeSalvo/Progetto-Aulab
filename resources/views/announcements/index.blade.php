@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :categoryName="$categoryName">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
