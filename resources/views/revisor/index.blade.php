@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid bg-success">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="dispay-1">Sezione Revisor</h1>

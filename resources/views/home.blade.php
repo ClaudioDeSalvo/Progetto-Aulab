@@ -44,8 +44,8 @@
     </div>
 
     {{-- ULTIMI ANNUNCI --}}
-    <div class="container-fluid mt-5">
-        <div class="row">
+    <div class="container-fluid annunciContainer">
+        <div class="row mb-5">
             <div class="col-12">
                 <h2 class="text-center mt-5 pt-5 roboto-flex-title">Ultimi annunci</h2>
             </div>
@@ -55,7 +55,7 @@
                 </div>
             @else
                 @for ($i = 0; $i < count($announcements); $i++)
-                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="col-12 col-md-4 " data-aos="fade-up" data-aos-duration="3000">
                         <div class="card my-3 mx-5 card-74">
                             <img src="{{ $announcements[$i]->images()->first()->getUrl(300, 300) }}"
                                 class="card-img-top img-fluid" alt="...">

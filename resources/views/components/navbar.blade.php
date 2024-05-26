@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark ">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         {{-- HOME --}}
         <a class="navbar-brand" href="{{ route('home') }}">
@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {{-- all the products --}}
-                <li class="nav-item">
+                <li class="nav-item SMN_effect-44">
                     <a class="nav-link @if (Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
                         href="{{ route('announcement.indexAll') }}">Articoli</a>
                 </li>

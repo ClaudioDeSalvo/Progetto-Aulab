@@ -27,4 +27,7 @@
             @endforeach
         </div>
     </div>
+    <div class="d-flex justify-content-center">
+        {!! $announcements->links() !!}
+    </div>
 </x-layout>
