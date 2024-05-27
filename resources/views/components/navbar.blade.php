@@ -37,7 +37,7 @@
                             @if (Route::currentRouteName() == 'announcement.index')
                                 {{ $categoryName }}
                             @else
-                            {{ __('ui.Categorie') }}
+                                {{ __('ui.Categorie') }}
                             @endif
                         </a>
                         <ul class="dropdown-menu">
@@ -68,12 +68,11 @@
                             </a>
                             <ul class="dropdown-menu">
                                 @if (!Auth::user()->is_revisor)
-                                    <li><a class="dropdown-item" href="{{ route('revisor.request') }}">{{ __('ui.Diventa Revisore') }}</a>
-                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="{{ route('revisor.request') }}">{{ __('ui.Diventa revisore') }}</a></li>
                                 @endif
-                                <li>
-                                </li>
-                                <li><a class="dropdown-item" href="{{ route('announcement.create') }}">{{ __('ui.Crea annuncio') }}</a>
+                                <li><a class="dropdown-item"
+                                        href="{{ route('announcement.create') }}">{{ __('ui.Crea annuncio') }}</a>
                                 </li>
                                 <li>
                                     {{-- LOGOUT USER --}}
@@ -89,8 +88,8 @@
                                 </li>
                                 {{-- DELETE USER --}}
                                 <li><a class="dropdown-item" href="{{ route('user.destroy') }}"
-                                        onclick="event.preventDefault();document.querySelector('#form-destroy').submit()">{{ __('ui.Cancella
-                                        il tuo profilo') }}</a></li>
+                                        onclick="event.preventDefault();document.querySelector('#form-destroy').submit()">{{ __('ui.Cancella il tuo profilo') }}</a>
+                                </li>
                                 <form action="{{ route('user.destroy') }}" id="form-destroy" method="POST" class="d-none">
                                     @csrf
                                     @method('delete')
@@ -107,25 +106,23 @@
                 </form>
 
                 <div class="nav-item dropdown lang-item">
-                
+
                     <button class="btnlocal" data-bs-toggle="dropdown" aria-expanded="false">
-                        @if(__('ui.Articoli') == 'Articoli')
-                        <img src="{{ asset('vendor/blade-flags/language-' . 'it' . '.svg') }}" alt=""
-                            width="32" height="32" class="" />
+                        @if (__('ui.Articoli') == 'Articoli')
+                            <img src="{{ asset('vendor/blade-flags/language-' . 'it' . '.svg') }}" alt=""
+                                width="32" height="32" class="" />
                         @elseif (__('ui.Articoli') == 'Artículos')
-                        <img src="{{ asset('vendor/blade-flags/language-' . 'es' . '.svg') }}" alt=""
-                            width="32" height="32" class="" />
+                            <img src="{{ asset('vendor/blade-flags/language-' . 'es' . '.svg') }}" alt=""
+                                width="32" height="32" class="" />
                         @elseif (__('ui.Articoli') == 'Articles')
-                        <img src="{{ asset('vendor/blade-flags/language-' . 'en' . '.svg') }}" alt=""
-                            width="32" height="32" class="" />
+                            <img src="{{ asset('vendor/blade-flags/language-' . 'en' . '.svg') }}" alt=""
+                                width="32" height="32" class="" />
                         @endif
                     </button>
                     <ul class="dropdown-menu dropdown-custom">
-                        
-                        <li class="@if(session()->get('locale') == 'en') d-none @endif"><x-_local lang="en" /></li>
-                        <li class="@if(session()->get('locale') == 'es') d-none @endif"><x-_local lang="es" /></li>
-                        <li class="@if(session()->get('locale') == 'it') d-none @endif"><x-_local lang="it" /></li>
-                    
+                        <li class="@if (__('ui.Articoli') == 'Articles') d-none @endif"><x-_local lang="en" /></li>
+                        <li class="@if (__('ui.Articoli') == 'Artículos') d-none @endif"><x-_local lang="es" /></li>
+                        <li class="@if (__('ui.Articoli') == 'Articoli') d-none @endif"><x-_local lang="it" /></li>
                     </ul>
                 </div>
 
