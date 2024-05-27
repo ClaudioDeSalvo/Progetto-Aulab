@@ -103,7 +103,7 @@
                 <form class="d-flex mx-3 mt-3" role="search" action="{{ route('announcement.search') }}" method="GET">
                     <input class="form-control me-2 searchResize" type="search" placeholder="Search" aria-label="Search"
                         name="query">
-                    <button class="btn btn-dark searchResize" type="submit">{{ __('ui.Cerca') }}</button>
+                    <button class="button-74 searchResize" type="submit">{{ __('ui.Cerca') }}</button>
                 </form>
 
                 <div class="nav-item dropdown lang-item">

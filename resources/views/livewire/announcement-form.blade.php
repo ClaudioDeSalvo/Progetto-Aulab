@@ -102,7 +102,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button scrollY() id="btnCustom" type="submit" class="btn btn-primary">{{ __('ui.Invia') }}</button>
+                <button scrollY() id="btnCustom" type="submit" class="button-74">{{ __('ui.Invia') }}</button>
             </form>
         </div>
     </div>
