@@ -33,11 +33,11 @@
             </div>
             <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center">
                 <div>
-                    <h1>Crea qui il tuo Annuncio!</h1>
+                    <h1>{{ __('ui.Crea qui il tuo annuncio') }}!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequuntur hic aliquam ex
                         perspiciatis est necessitatibus. Soluta deleniti ipsum tenetur accusamus eum libero odit
                         eveniet? Ut porro nobis illo distinctio.</p>
-                    <button class="button-74" role="button">Crea Annuncio</button>
+                    <button class="button-74" role="button">{{ __('ui.Crea annuncio') }}</button>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
     <div class="container-fluid annunciContainer">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center mt-5 pt-5 roboto-flex-title">Ultimi annunci</h2>
+                <h2 class="text-center mt-5 pt-5 roboto-flex-title">{{ __('ui.Ultimi Annunci') }}</h2>
             </div>
             @if (count($announcements) == 0)
                 <div class="col-12">

@@ -16,7 +16,7 @@
                     {{-- all the products --}}
                     <li class="nav-item SMN_effect-44">
                         <a class="nav-link @if (Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
-                            href="{{ route('announcement.indexAll') }}">Articoli</a>
+                            href="{{ route('announcement.indexAll') }}">{{ __('ui.Articoli') }}</a>
                     </li>
                     {{-- SEZIONI REVISOR --}}
                     @auth
@@ -37,7 +37,7 @@
                             @if (Route::currentRouteName() == 'announcement.index')
                                 {{ $categoryName }}
                             @else
-                                Categorie
+                            {{ __('ui.Categorie') }}
                             @endif
                         </a>
                         <ul class="dropdown-menu">
@@ -52,12 +52,12 @@
                         {{-- register --}}
                         <li class="nav-item">
                             <a class="nav-link @if (Route::currentRouteName() == 'register') active @endif"
-                                href="{{ route('register') }}">Registrati</a>
+                                href="{{ route('register') }}">{{ __('ui.Registrati') }}</a>
                         </li>
                         {{-- log in --}}
                         <li class="nav-item">
                             <a class="nav-link @if (Route::currentRouteName() == 'login') active @endif"
-                                href="{{ route('login') }}">Accedi</a>
+                                href="{{ route('login') }}">{{ __('ui.Accedi') }}</a>
                         </li>
                     @else
                         {{-- user actions --}}
@@ -73,7 +73,7 @@
                                 @endif
                                 <li>
                                 </li>
-                                <li><a class="dropdown-item" href="{{ route('announcement.create') }}">Crea annuncio</a>
+                                <li><a class="dropdown-item" href="{{ route('announcement.create') }}">{{ __('ui.Crea annuncio') }}</a>
                                 </li>
                                 <li>
                                     {{-- 
@@ -114,7 +114,7 @@
                 <form class="d-flex mx-3" role="search" action="{{ route('announcement.search') }}" method="GET">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                         name="query">
-                    <button class="btn btn-success" type="submit">Cerca</button>
+                    <button class="btn btn-success" type="submit">{{ __('ui.Cerca') }}</button>
                 </form>
 
                 <div class="nav-item dropdown lang-item">

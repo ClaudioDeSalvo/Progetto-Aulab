@@ -14,7 +14,7 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label">Indirizzo Mail</label>
+                        <label class="form-label">{{ __('ui.Indirizzo email') }}</label>
                         <input type="email" class="form-control" name="email">
                     </div>
                     <div class="mb-3">
@@ -25,7 +25,7 @@
                         <input type="checkbox" class="form-check-input" name="remember" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <button type="submit" class="button-74 mb-5">Invia</button>
+                    <button type="submit" class="button-74 mb-5">{{ __('ui.Invia') }}</button>
                 </form>
             </div>
         </div>
