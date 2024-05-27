@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid yellowFont">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="dispay-1">{{__('ui.Zona revisore')}}</h1>
@@ -34,14 +34,14 @@
                     <h2>{{ __('ui.Sottotitolo') }} : {{ $announcement_to_check->subtitle }}</h2>
                     <h3>{{ __('ui.Autore') }} : {{ $announcement_to_check->user->name }}</h3>
                     <h4>{{ __('ui.Prezzo') }} {{ $announcement_to_check->price }} €</h4>
-                    <h4 class="fst-italic text-muted"># {{ $announcement_to_check->category->name }}</h4>
+                    <h4># {{ $announcement_to_check->category->name }}</h4>
                     <p>{{ $announcement_to_check->body }}</p>
                 </div>
                 <div class="d-flex pb-4 justify-content-around">
                     <form action="{{ route('accept', ['announcement' => $announcement_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-success">{{ __('ui.Approva') }}</button>
+                        <button type="submit" class="btn btn-success mx-3">{{ __('ui.Approva') }}</button>
                     </form>
                     <form action="{{ route('reject', ['announcement' => $announcement_to_check]) }}" method="POST">
                         @csrf
@@ -64,7 +64,7 @@
             <form action="{{ route('reset') }}" method="POST">
                 @csrf
                 @method('PATCH')
-                <button type="submit" class="btn btn-danger">{{ __('ui.Resetta') }}</button>
+                <button type="submit" class="button-74">{{ __('ui.Resetta') }}</button>
             </form>
         @endif
     </div>

@@ -75,7 +75,7 @@
                         <div id="imgUploaded" class="row">
                             <div class="col-12">
                                 <p>{{ __('ui.Anteprima foto') }}</p>
-                                <div class="row border border-4 border-success rounded shadow px-4 py-4">
+                                <div class="row border border-4 rounded shadow px-4 py-4">
                                     @foreach ($imgs as $key => $img)
                                         <div class="col d-flex flex-column align-items-center my-3 ">
                                             <div class="img-preview mx-auto shadow rounded"

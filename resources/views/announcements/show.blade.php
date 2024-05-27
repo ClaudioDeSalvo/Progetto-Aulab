@@ -41,11 +41,11 @@
             </div>
             {{-- FINE CAROUSEL IMG --}}
             {{-- <img src="{{ Storage::url($announcement->img) }}" class="img-fluid" alt="..."> --}}
-            <div class="col-12 col-md-6 mt-5 align-content-center p-0">
+            <div class="col-12 col-md-6 mt-5 align-content-center yellowFont p-0">
                 <h2>{{ $announcement->title }}</h2>
                 <h5>{{ $announcement->subtitle }}</h5>
                 <p>{{ $announcement->body }}</p>
-                <p>{{ $announcement->price }}</p>
+                <p>{{ $announcement->price }} $</p>
                 <p>{{ $announcement->category->name }}</p>
             </div>
         </div>
