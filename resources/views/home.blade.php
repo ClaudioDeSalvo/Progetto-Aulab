@@ -13,17 +13,19 @@
 
     {{-- LOGO HEADER --}}
     <div class="container-fluid">
-        <div class="row d-flex flex-column align-items-center justify-content-center header">
-            <div class="col-12 align-items-center d-flex justify-content-center ">
+        <div class="row justify-content-center header">
+            <div class="col-8">
+                <h1 class="text-warning text-center">TITULO</h1>
             </div>
-            <div class="col-6 text-center justify-content-center"> 
+
+            <div class="col-6 text-center justify-content-center">
             </div>
         </div>
     </div>
 
 
     {{-- VINYL + BTN SECTION --}}
-    <div class="container-fluid backgroundVinile">
+    <div class="container-fluid backgroundVinile ">
         <div class="row justify-content-center">
             <div class="col-4 p-0 " data-aos="fade-right" data-aos-duration="1500">
                 <img src="/storage/img/yellowlogo.png" alt="vinile sx" class="vinileHome">
@@ -41,7 +43,7 @@
     </div>
 
     {{-- ULTIMI ANNUNCI --}}
-    <div class="container-fluid annunciContainer">
+    <div class="container-fluid annunciContainer ">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center mt-5 pt-5 roboto-flex-title">{{ __('ui.Ultimi Annunci') }}</h2>
@@ -53,14 +55,14 @@
             @else
                 @for ($i = 0; $i < count($announcements); $i++)
                     <div class="col-12 col-md-4 " data-aos="fade-up" data-aos-duration="3000">
-                        <div class="card my-3 mx-5 card-74">
-                            <img src="{{ $announcements[$i]->images()->first()->getUrl(300, 300) }}"
+                        <div class="single-card">
+                            <div class="card-img ">
+                                <img src="{{ $announcements[$i]->images()->first()->getUrl(300, 300) }}"
                                 class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <h2 class="card-title">{{ $announcements[$i]->title }}</h2>
-                                <h5 class="card-title">{{ $announcements[$i]->subtitle }}</h5>
+                                </div>
+                            <div class="content mb-5">
+                                <h2 class="card-title text-center">{{ $announcements[$i]->title}}</h2>
                                 <p class="card-text">{{ $announcements[$i]->category->name }}</p>
-                                <p class="card-text">{{ $announcements[$i]->created_at }}</p>
                                 <p class="card-text">{{ $announcements[$i]->user->name }}</p>
                                 <a href="{{ route('announcement.show', ['announcement' => $announcements[$i]]) }}"
                                     class="button-74">Vai ai dettagli</a>

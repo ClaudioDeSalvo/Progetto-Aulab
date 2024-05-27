@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start text-muted">
     <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 ">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
             <span><i class="fa-solid fa-share-nodes"></i> {{__('ui.Rimani connesso ai nostri social networks')}} :</span>

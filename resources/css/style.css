@@ -1,29 +1,3 @@
-/* PALETTE COLORI */
-
-:root {
-
-    --light-cipria: #FCEE0A;
-    --prime-beige: #a98467;
-    --light-beige: #ffcb69;
-    --light-greeng: #dde5b6;
-    --prime-sand: #f0ead2;
-    --second-sand: #00000070;
-}
-
-.add-bg-beige{
-    background-color: var(--prime-sand);
-}
-
-.resizeCustom{
-    resize: none;
-    height: 100px;
-}
-
-
-/* .marginCustom{
-    margin-top: 67px;
-} */
-
 /* FONTS */
 @font-face {
     font-family: 'Market Deco';
@@ -31,6 +5,7 @@
     font-weight: 400;
     src: local('Market Deco'), url('https://fonts.cdnfonts.com/s/4344/Market_Deco.woff') format('woff');
 }
+
 /* subtitle */
 @font-face {
     font-family: 'M PLUS Code Latin';
@@ -38,6 +13,7 @@
     font-weight: 400;
     src: local('M PLUS Code Latin'), url('https://fonts.cdnfonts.com/s/107411/MPLUSCodeLatin[wdth,wght].woff') format('woff');
 }
+
 /* paragraph */
 @font-face {
     font-family: 'Safilms Crawford';
@@ -46,13 +22,33 @@
     src: local('Safilms Crawford'), url('https://fonts.cdnfonts.com/s/105018/SafilmsCrawford-K7zeD.woff') format('woff');
 }
 
+/* PALETTE COLORI */
+
+:root {
+
+    --aulab-yellow: #f1e82e;
+    --prime-beige: #a98467;
+    --light-beige: #ffcb69;
+    --light-greeng: #dde5b6;
+    --prime-sand: #f0ead2;
+    --light-black: #121212;
+}
+
+.add-neon-border {
+    z-index: 9999;
+    box-shadow: 0px 1px 2px var(--aulab-yellow),
+        0px 2px 4px var(--aulab-yellow),
+        0px 4px 8px var(--aulab-yellow),
+        0px 8px 16px var(--aulab-yellow);
+}
+
 
 
 /* SFONDO HEADER */
-.header{
+.header {
     min-height: 600px;
     background-image: url('/storage/app/public/img/header.png');
-    border:none;
+    border: none;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -89,130 +85,91 @@ h1 {
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--light-cipria);
+    background-color: var(--aulab-yellow);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 2;
-    box-shadow:2px solid black;
+    box-shadow: 2px solid black;
 }
 
 /* IMMAGINE NAVBAR */
-.imgNav{
-    width: 70px;
-    height: 40px;
+.imgNav {
+    height: 50px;
     margin: none;
     padding: none;
 }
 
 
 /* LANGUAGGE FLAGS */
-.dropdown-custom{
+.dropdown-custom {
     --bs-dropdown-min-width: 32px;
     --bs-dropdown-item-padding-y: 0;
     --bs-dropdown-item-padding-x: 0;
     --bs-dropdown-padding-y: 0;
     --bs-dropdown-padding-x: 0;
 }
+
 .btnlocal {
     border: none;
-    background-color: var(--light-cipria);
+    background-color: var(--aulab-yellow);
 }
 
 
 
 /* BODY */
 body {
+    background-image: url('/storage/app/public/img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     margin-top: 67px;
     font-family: 'M PLUS Code Latin';
     font-style: normal;
     font-weight: 400;
 }
 
-/* .page-Bg-color {
-    background-color: var(--light-beige);
-} */
-
 /* LOGO TITLE-SUBTITLE */
-h1{
+h1 {
     font-family: 'Market Deco';
     font-style: normal;
     font-weight: 500;
 }
-.h1-alt{
+
+.h1-alt {
     font-family: 'M PLUS Code Latin';
     font-style: normal;
     font-weight: 400;
 }
 
 /* Sezione annuncio */
-.vinileHome{
-    height:650px ;
+.vinileHome {
+    height: 600px;
 }
 
-.backgroundVinile{
-    background-image: url('/storage/app/public/img/categorie.png');
-
+.backgroundVinile {
+    border-color: var(--aulab-yellow);
+    color: var(--aulab-yellow);
 }
-
-.card-74{
-    background-color: #fbeee0;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: #422800;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 0 18px;
-    line-height: 50px;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    transition: all 0.6s ease;
-}
-.card-74:hover{
-    box-shadow: rgba(255, 172, 28, 0.199) -10px 10px, rgba(255, 172, 28, 0.19) -20px 20px ;
-}
-
 
 /* BTN CREA ANNUNCIUO */
 .button-74 {
-    background-color: #fbeee0;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: #422800;
-    cursor: pointer;
-    display: inline-block;
+    border: 1px solid #38bdf8;
+    border-radius: 0.3em;
+    font-size: 0.9rem;
+    text-transform: uppercase;
     font-weight: 600;
-    font-size: 18px;
-    padding: 0 18px;
-    line-height: 50px;
-    text-align: center;
+    padding: 0.85em 1.65em;
+    background-color: #000;
     text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    box-shadow: 0px 2px 24px 2px rgba(3, 140, 220, .1);
+    transition: box-shadow 0.3s;
+    color: #fff;
 }
 
 .button-74:hover {
-    background-color: var(--second-sand);
-}
-
-.button-74:active {
-    box-shadow: #422800 2px 2px 0 0;
-    transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-    .button-74 {
-        min-width: 120px;
-        padding: 0 25px;
-    }
+    box-shadow: 0px 2px 24px 2px rgba(3, 140, 220, .6);
 }
 
 /* CAROUSEL DETTAGLIO  */
@@ -264,11 +221,144 @@ h1{
 }
 
 .loader:after {
-    color: #FF3D00;
+    color: var(--aulab-yellow);
     transform: rotateY(70deg);
     animation-delay: .4s;
 }
 
+
+/* FORM CREAZIONE ANNUNCI */
+.creationForm {
+    background-color: var(--aulab-yellow);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* COLORI PAGINATION*/
+.pagination {
+    --bs-pagination-color: var(--light-black);
+    --bs-pagination-bg: var(--prime-sand);
+    --bs-pagination-active-bg: var(--light-black);
+    --bs-pagination-disabled-bg: var(--prime-sand);
+}
+
+/* SEARCH NAVBAR */
+.searchResize {
+    height: 35px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--aulab-yellow);
+}
+
+.ancor-Footer {
+    text-decoration: none;
+}
+
+/* card */
+.single-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    transition: all 0.5s;
+    background: var(--aulab-yellow);
+    color: black;
+
+    &:hover {
+        height: 500px;
+
+        .content {
+            opacity: 1;
+        }
+
+        .card-img {
+
+            img {
+                opacity: 1;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: white;
+        z-index: -1;
+
+        background: linear-gradient(45deg, rgba(255, 5, 172, 1) 0%, rgba(255, 5, 172, 1) 18%, rgba(0, 255, 255, 1) 100%);
+        /* w3c */
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: white;
+        z-index: -1;
+        filter: blur(40px);
+        background: linear-gradient(45deg, rgba(255, 5, 172, 1) 0%, rgba(255, 5, 172, 1) 18%, rgba(0, 255, 255, 1) 100%);
+        /* w3c */
+    }
+
+    .card-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+
+        img {
+            max-width: 100%;
+            opacity: 1;
+            transition: 0.5s;
+            height: 280px;
+        }
+    }
+
+    .content {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transition: 0.5s;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            font-size: 28px;
+            line-height: 10px;
+        }
+    }
+}
+
+/* button-74 */
+
+@media (min-width: 768px) {
+    .button-74 {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}
+
+/* loader */
 @keyframes rotate {
     0% {
         transform: translate(-50%, -50%) rotateZ(0deg);
@@ -323,39 +413,4 @@ h1{
     87% {
         box-shadow: .2em -.2em 0 0 currentcolor;
     }
-}
-
-/* FORM CREAZIONE ANNUNCI */
-.creationForm{
-        background-image: url('/storage/app/public/img/form.png'); 
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    .annunciContainer{
-        background-color: var(--second-sand);
-        color: var(--light-greeng);
-    }
-    /* COLORI PAGINATION*/
-    .pagination{
-        --bs-pagination-color: var(--second-sand);
-        --bs-pagination-bg: var(--prime-sand);
-        --bs-pagination-active-bg: var(--second-sand);
-        --bs-pagination-disabled-bg: var(--prime-sand);
-    }
-
-    /* SEARCH NAVBAR */
-    .searchResize{
-        height: 35px;
-    }
-/* FOOTER */
-footer {
-    background-color: var(--prime-sand);
-}
-
-.ancor-Footer{
-    text-decoration: none;
 }

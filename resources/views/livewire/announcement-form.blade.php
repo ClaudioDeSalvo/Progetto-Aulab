@@ -8,9 +8,8 @@
             </ul>
         </div>
     @endif
-    <div id="announcementCreate" class="row justify-content-center align-content-center vh-100">
-        <div class="col-12 col-md-8 shadow rounded add-bg-beige">
-
+    <div id="announcementCreate" class="row justify-content-center align-item-center">
+        <div class="col-8">
             @if (session('message'))
                 <div class="alert alert-success" id="session1">
                     {{ session('message') }}
