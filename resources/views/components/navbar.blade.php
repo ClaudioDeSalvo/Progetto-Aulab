@@ -23,7 +23,7 @@
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item">
                                 <a class="nav-link btn btn-outline success btn-sm position-relative w-sm-25 text-start @if (Route::currentRouteName() == 'revisor.index') active @endif"
-                                    href="{{ route('revisor.index') }}">Zona Revisore
+                                    href="{{ route('revisor.index') }}">{{ __('ui.Zona revisore') }}
                                     <span
                                         class="position-absolute top-0 start- translate-middle badge rounded-pill bg-danger
                                     @if (\App\Models\Announcement::toBeRevisedCount() <= 0) d-none @endif">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
@@ -64,11 +64,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link @if (Route::currentRouteName() == 'revisor.request' || Route::currentRouteName() == 'announcement.create') active @endif dropdown-toggle"
                                 href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Ciao, {{ Auth::user()->name }}
+                                {{ __('ui.Ciao') }}, {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu">
                                 @if (!Auth::user()->is_revisor)
-                                    <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Diventa Revisor</a>
+                                    <li><a class="dropdown-item" href="{{ route('revisor.request') }}">{{ __('ui.Diventa Revisore') }}</a>
                                     </li>
                                 @endif
                                 <li>
@@ -76,21 +76,10 @@
                                 <li><a class="dropdown-item" href="{{ route('announcement.create') }}">{{ __('ui.Crea annuncio') }}</a>
                                 </li>
                                 <li>
-                                    {{-- 
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li> --}}
                                     {{-- LOGOUT USER --}}
                                     <hr class="dropdown-divider">
                                 <li><a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();document.querySelector('#logout-form').submit()">Esci</a>
+                                        onclick="event.preventDefault();document.querySelector('#logout-form').submit()">{{ __('ui.Esci') }}</a>
                                 </li>
                                 <form action="{{ route('logout') }}" class="d-none" id="logout-form" method="POST">
                                     @csrf
@@ -100,8 +89,8 @@
                                 </li>
                                 {{-- DELETE USER --}}
                                 <li><a class="dropdown-item" href="{{ route('user.destroy') }}"
-                                        onclick="event.preventDefault();document.querySelector('#form-destroy').submit()">Cancella
-                                        il tuo profilo</a></li>
+                                        onclick="event.preventDefault();document.querySelector('#form-destroy').submit()">{{ __('ui.Cancella
+                                        il tuo profilo') }}</a></li>
                                 <form action="{{ route('user.destroy') }}" id="form-destroy" method="POST" class="d-none">
                                     @csrf
                                     @method('delete')

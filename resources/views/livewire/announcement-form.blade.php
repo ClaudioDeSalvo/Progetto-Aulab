@@ -20,7 +20,7 @@
             <form wire:submit.prevent='save' enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">Titolo</label>
+                    <label class="form-label">{{ __('ui.Titolo') }}</label>
                     <input wire:model.blur="title" type="text"
                         class="form-control @error('title') is-invalid @enderror" name="title">
                     <div>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Sottotitolo</label>
+                    <label class="form-label">{{ __('ui.Sottotitolo') }}</label>
                     <input wire:model.blur="subtitle" type="text"
                         class="form-control @error('subtitle') is-invalid @enderror" name="subtitle">
                     <div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Corpo del testo</label>
+                    <label class="form-label">{{ __('ui.Corpo del testo') }}</label>
                     <textarea class="form-control resizeCustom @error('body') is-invalid @enderror" name="body" wire:model.blur="body" id=""
                         cols="30" rows="10"></textarea>
                     <div>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Prezzo</label>
+                    <label class="form-label">{{ __('ui.Prezzo') }}</label>
                     <input wire:model.blur="price" type="text"
                         class="form-control @error('price') is-invalid @enderror" name="price">
                     <div>
@@ -80,7 +80,7 @@
                     @if (!empty($imgs))
                         <div id="imgUploaded" class="row">
                             <div class="col-12">
-                                <p>Anteprima foto</p>
+                                <p>{{ __('ui.Anteprima foto') }}</p>
                                 <div class="row border border-4 border-success rounded shadow px-4 py-4">
                                     @foreach ($imgs as $key => $img)
                                         <div class="col d-flex flex-column align-items-center my-3 ">
@@ -103,7 +103,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button scrollY() id="btnCustom" type="submit" class="btn btn-primary">Invia</button>
+                <button scrollY() id="btnCustom" type="submit" class="btn btn-primary">{{ __('ui.Invia') }}</button>
             </form>
         </div>
     </div>

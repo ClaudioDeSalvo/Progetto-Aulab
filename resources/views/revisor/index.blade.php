@@ -30,10 +30,10 @@
             </div>
             <div class="col-md-4 ps-4 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column justify-content-center">
-                    <h1>Titolo : {{ $announcement_to_check->title }}</h1>
-                    <h2>Sottotitolo : {{ $announcement_to_check->subtitle }}</h2>
-                    <h3>Autore : {{ $announcement_to_check->user->name }}</h3>
-                    <h4>{{ $announcement_to_check->price }}</h4>
+                    <h1>{{ __('ui.Titolo') }} : {{ $announcement_to_check->title }}</h1>
+                    <h2>{{ __('ui.Sottotitolo') }} : {{ $announcement_to_check->subtitle }}</h2>
+                    <h3>{{ __('ui.Autore') }} : {{ $announcement_to_check->user->name }}</h3>
+                    <h4>{{ __('ui.Prezzo') }}{{ $announcement_to_check->price }} €</h4>
                     <h4 class="fst-italic text-muted">#{{ $announcement_to_check->category->name }}</h4>
                     <p>{{ $announcement_to_check->body }}</p>
                 </div>
@@ -41,20 +41,20 @@
                     <form action="{{ route('accept', ['announcement' => $announcement_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-success">Approva</button>
+                        <button type="submit" class="btn btn-success">{{ __('ui.Approva') }}</button>
                     </form>
                     <form action="{{ route('reject', ['announcement' => $announcement_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger">Rifiuta</button>
+                        <button type="submit" class="btn btn-danger">{{ __('ui.Rifiuta') }}</button>
                     </form>
                 </div>
             </div>
         @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h2>Nessun articolo da revisionare</h2>
-                    <a href="{{ route('home') }}">Torna alla Homepage</a>
+                    <h2>{{ __('ui.Nessun articolo da revisionare') }}</h2>
+                    <a href="{{ route('home') }}">{{ __('ui.Torna alla Homepage') }}</a>
                 </div>
             </div>
         @endif
@@ -64,7 +64,7 @@
             <form action="{{ route('reset') }}" method="POST">
                 @csrf
                 @method('PATCH')
-                <button type="submit" class="btn btn-danger">Resetta</button>
+                <button type="submit" class="btn btn-danger">{{ __('ui.Resetta') }}</button>
             </form>
         @endif
     </div>

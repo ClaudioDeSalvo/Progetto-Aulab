@@ -28,10 +28,6 @@
                         <label class="form-label">{{ __('ui.Conferma Password') }}</label>
                         <input type="password" class="form-control" name="password_confirmation">
                     </div>
-                    {{-- <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="remember" name="remember" value="1">
-                        <label class="form-check-label" for="exampleCheck1">Ricordami</label>
-                    </div> --}}
                     <button type="submit" class="button-74 mb-5">{{ __('ui.Registrati') }}</button>
                 </form>
             </div>

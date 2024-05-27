@@ -14,5 +14,23 @@
     'Indirizzo email'=>'Mail Address',
     'Conferma Password'=>'Password confirmation',
     'Invia'=>'Send',
+    'Titolo'=>'Title',
+    'Sottotitolo'=>'Subtitle',
+    'Corpo del testo'=>'Description',
+    'Prezzo'=>'Price',
+    'Anteprima foto'=>'Preview photo',
+    'Autore'=>'Author',
+    'Approva'=>'Approve',
+    'Rifiuta'=>'Refuse',
+    'Resetta'=>'Reset',
+    'Nessun articolo da revisionare'=>'No items to reviewe',
+    'Torna alla Homepage'=>'Back to Homepage',
+    'Zona revisore'=>'Reviewer area',
+    'Diventa revisore'=>'Become a reviewer',
+    'Ciao'=>'Hello',
+    'Esci'=>'Exit',
+    'Cancella il tuo profilo'=>'Delete your profile',
+    ''=>'',
+  
     
     ];
