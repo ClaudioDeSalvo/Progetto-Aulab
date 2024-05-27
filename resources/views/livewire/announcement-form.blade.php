@@ -8,7 +8,7 @@
             </ul>
         </div>
     @endif
-    <div class="row justify-content-center align-content-center vh-100">
+    <div id="announcementCreate" class="row justify-content-center align-content-center vh-100">
         <div class="col-12 col-md-8 shadow rounded add-bg-beige">
 
             @if (session('message'))
@@ -103,7 +103,7 @@
                         @endforeach
                     </select>
                 </div>
-                <button id="btnCustom" type="submit" class="btn btn-primary">Invia</button>
+                <button scrollY() id="btnCustom" type="submit" class="btn btn-primary">Invia</button>
             </form>
         </div>
     </div>
