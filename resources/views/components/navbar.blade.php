@@ -107,13 +107,26 @@
                 </form>
 
                 <div class="nav-item dropdown lang-item">
+                
                     <button class="btnlocal" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        @if(Articoli == 'Articoli')
                         <img src="{{ asset('vendor/blade-flags/language-' . 'it' . '.svg') }}" alt=""
                             width="32" height="32" class="" />
+                        @elseif (_('ui.Articoli') == 'Articulos')
+                        <img src="{{ asset('vendor/blade-flags/language-' . 'es' . '.svg') }}" alt=""
+                            width="32" height="32" class="" />
+                        @else
+                        <img src="{{ asset('vendor/blade-flags/language-' . 'en' . '.svg') }}" alt=""
+                            width="32" height="32" class="" />
+                        @endif
                     </button>
                     <ul class="dropdown-menu dropdown-custom">
-                        <li><a class="dropdown-item" href=""><x-_local lang="en" /></a></li>
-                        <li><a class="dropdown-item" href=""><x-_local lang="es" /></a></li>
+                        
+                        <li class="@if(session()->get('locale') == 'en') d-none @endif"><x-_local lang="en" /></li>
+                        <li class="@if(session()->get('locale') == 'es') d-none @endif"><x-_local lang="es" /></li>
+                        <li class="@if(session()->get('locale') == 'it') d-none @endif"><x-_local lang="it" /></li>
+                    
                     </ul>
                 </div>
 
