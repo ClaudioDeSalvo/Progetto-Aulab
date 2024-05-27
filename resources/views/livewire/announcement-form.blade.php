@@ -8,14 +8,9 @@
             </ul>
         </div>
     @endif
+    <h1 class="text-center my-5 pt-5">{{ __('ui.Crea annuncio') }}</h1>
     <div id="announcementCreate" class="row justify-content-center align-item-center">
-        <div class="col-8">
-            @if (session('message'))
-                <div class="alert alert-success" id="session1">
-                    {{ session('message') }}
-                </div>
-            @endif
-
+        <div class="col-8 creationForm rounded">
             <form wire:submit.prevent='save' enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
