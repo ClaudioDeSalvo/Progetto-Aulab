@@ -27,3 +27,32 @@ if (announcementCreate) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", 
+function createInterval(total, finalNumber, time) {
+    let counter = 0;
+    let interval = setInterval(() => {
+        if (counter < total) {
+            counter++
+            finalNumber.innerHTML = '+' + counter
+        } else {
+            clearInterval(interval)
+        }
+    }, time)
+
+
+let check = true;
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach((el) => {
+        if (el.isIntersecting && check) {
+            createInterval(600, firstNumber, 20)
+            createInterval(1000, secondNumber, 10)
+            createInterval(50, thirdNumber, 100)
+            check = false;
+            setTimeout(() => {
+                check = true
+            }, 12000)
+        }
+    })
+});
+observer.observe(thirdNumber)
+});

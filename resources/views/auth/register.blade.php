@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mt-5 pt-2">
                 <h1>Registrati</h1>
                 <h2>Unisciti ai venditori!</h2>
             </div>

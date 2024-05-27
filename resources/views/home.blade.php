@@ -12,16 +12,15 @@
     @endif
 
     {{-- LOGO HEADER --}}
-    <div class="container-fluid">
-        <div class="row justify-content-center header">
-            <div class="col-8">
-                <h1 class="text-warning text-center">TITULO</h1>
-            </div>
-
-            <div class="col-6 text-center justify-content-center">
+    <section class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center align-items-center header">
+                <div class="stack">
+                    <h1 class="glitch">CyberPresto</h1>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
     {{-- VINYL + BTN SECTION --}}
@@ -32,21 +31,44 @@
             </div>
             <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center">
                 <div>
-                    <h1>{{ __('ui.Crea qui il tuo annuncio') }}!</h1>
+                    <h1>{{ __('ui.Crea qui il tuo annuncio') }}</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequuntur hic aliquam ex
                         perspiciatis est necessitatibus. Soluta deleniti ipsum tenetur accusamus eum libero odit
                         eveniet? Ut porro nobis illo distinctio.</p>
-                    <button class="button-74" role="button">{{ __('ui.Crea annuncio') }}</button>
+                    <a class="button-74" href="{{ route('announcement.create') }}">{{ __('ui.Crea annuncio') }}</a>
                 </div>
             </div>
         </div>
     </div>
 
+    {{-- I NOSTRI NUMERI --}}
+    <section class="container-fluid" id="numbersSection">
+        <div class="row justify-content-between bg-darkBlue flex-column-reverse flex-md-row">
+            <!-- Immagine di sinistra -->
+            <div class="col-12 col-md-3 ps-0">
+                <img data-aos="fade-right" data-aos-duration="1000" class="img-fluid numbers-img"
+                    src="../imgs/android.png" alt="">
+            </div>
+            <div
+                class="col-12 col-md-6 text-whiteCustom d-flex justify-content-center flex-column text-center text-md-start">
+                <h2 class="font-title display-2 glitch"> Un pò di numeri </h2>
+                <p class="my-3 fs-4 yellowFont"><span id="firstNumber"
+                        class="fw-bold fs-1 text-orange me-3 yellowFont">0</span> Giochi venduti </p>
+                <p class="my-3 fs-4 yellowFont"><span id="secondNumber"
+                        class="fw-bold fs-1 text-orange me-3 yellowFont">0</span> Clienti
+                    soddisfatti</p>
+                <p class="my-3 fs-4 yellowFont"><span id="thirdNumber"
+                        class="fw-bold fs-1 text-orange me-3 yellowFont">0</span> Recensioni ricevute
+                </p>
+            </div>
+        </div>
+    </section>
+
     {{-- ULTIMI ANNUNCI --}}
     <div class="container-fluid annunciContainer ">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center mt-5 pt-5 roboto-flex-title">{{ __('ui.Ultimi Annunci') }}</h2>
+                <h2 class="text-center mt-5 pt-5 roboto-flex-title glitch">{{ __('ui.Ultimi Annunci') }}</h2>
             </div>
             @if (count($announcements) == 0)
                 <div class="col-12">
@@ -56,12 +78,12 @@
                 @for ($i = 0; $i < count($announcements); $i++)
                     <div class="col-12 col-md-4 " data-aos="fade-up" data-aos-duration="3000">
                         <div class="single-card">
-                            <div class="card-img ">
+                            <div class="card-img">
                                 <img src="{{ $announcements[$i]->images()->first()->getUrl(300, 300) }}"
-                                class="card-img-top img-fluid" alt="...">
-                                </div>
+                                    class="card-img-top img-fluid" alt="...">
+                            </div>
                             <div class="content mb-5">
-                                <h2 class="card-title text-center">{{ $announcements[$i]->title}}</h2>
+                                <h2 class="card-title text-center">{{ $announcements[$i]->title }}</h2>
                                 <p class="card-text">{{ $announcements[$i]->category->name }}</p>
                                 <p class="card-text">{{ $announcements[$i]->user->name }}</p>
                                 <a href="{{ route('announcement.show', ['announcement' => $announcements[$i]]) }}"
