@@ -26,3 +26,4 @@ if (announcementCreate) {
         window.scrollTo(0, -100);  // Correct way to scroll the window
     });
 }
+
