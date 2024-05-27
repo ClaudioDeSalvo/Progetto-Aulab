@@ -30,9 +30,27 @@
     'Ciao'=>'Ciao',
     'Esci'=>'Esci',
     'Cancella il tuo profilo'=>'Cancella il tuo profilo',
-    ''=>'',
-
-   
-
-    
-    ];
+    'Risultati per'=>'Risultati per',
+    // SEZIONE CATEGORIE
+    'Azione'=>'Azione',
+    'JRPG'=>'JRPG',
+    'Sparatutto'=>'Sparatutto',
+    'Strategici'=>' Strategici',
+    'Puzzle'=>'Puzzle',
+    'Arcade'=>'Arcade',
+    'Avventura'=>'Avventura',
+    'Sport'=>'Sport',
+    'Motori'=>'Motori',
+    'Platform'=>'Platform',
+    // SEZIONE FOOTER
+    'Link Utili'=>'Link Utili',
+    'Chi siamo'=>'Chi siamo',
+    'Lavora con noi'=>'Lavora con noi',
+    'Assistenza'=>'Assistenza',
+    'Aiuto'=>'Aiuto',
+    'Rimani connesso ai nostri social networks'=>'Rimani connesso ai nostri social networks',
+    'Giovani developer, affettati, bisunti e trasudanti'=>'Giovani developer, affettati, bisunti e trasudanti',
+    'Contatti'=>'Contatti',
+    "Dettaglio dell'annuncio :"=>"Dettaglio dell'annuncio :",
+    'Vai ai dettagli'=>'Vai ai dettagli',
+];

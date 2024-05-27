@@ -2,12 +2,12 @@
 
 :root {
 
-    --light-cipria: #6c584c;
+    --light-cipria: #FCEE0A;
     --prime-beige: #a98467;
     --light-beige: #ffcb69;
     --light-greeng: #dde5b6;
     --prime-sand: #f0ead2;
-    --second-sand: #5b5a57;
+    --second-sand: #00000070;
 }
 
 .add-bg-beige{
@@ -20,9 +20,9 @@
 }
 
 
-.marginCustom{
-    margin-top: 76px;
-}
+/* .marginCustom{
+    margin-top: 67px;
+} */
 
 /* FONTS */
 @font-face {
@@ -51,7 +51,7 @@
 /* SFONDO HEADER */
 .header{
     min-height: 600px;
-    background-image: url('/storage/app/public/img/sfondodoggo.jpg');
+    background-image: url('/storage/app/public/img/header.png');
     border:none;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,23 +89,20 @@ h1 {
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--second-sand);
+    background-color: var(--light-cipria);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 2;
-    /* border: solid 1px black; */
-    box-shadow: black;
+    box-shadow:2px solid black;
 }
 
 /* IMMAGINE NAVBAR */
 .imgNav{
-    width: 110px;
-    height: 50px;
+    width: 70px;
+    height: 40px;
     margin: none;
     padding: none;
-    margin-left:-10px;
-    margin-right:10px;
 }
 
 
@@ -119,15 +116,14 @@ h1 {
 }
 .btnlocal {
     border: none;
-    background-color: var(--second-sand);
+    background-color: var(--light-cipria);
 }
 
 
 
 /* BODY */
 body {
-    margin-top: 50px;
-
+    margin-top: 67px;
     font-family: 'M PLUS Code Latin';
     font-style: normal;
     font-weight: 400;
@@ -155,9 +151,8 @@ h1{
 }
 
 .backgroundVinile{
-    /* background-color: var(--prime-sand);
-    border-top: var(--light-cipria); */
-    background:linear-gradient(to bottom,var(--light-greeng),var(--second-sand));
+    background-image: url('/storage/app/public/img/categorie.png');
+
 }
 
 .card-74{
@@ -352,6 +347,10 @@ h1{
         --bs-pagination-disabled-bg: var(--prime-sand);
     }
 
+    /* SEARCH NAVBAR */
+    .searchResize{
+        height: 35px;
+    }
 /* FOOTER */
 footer {
     background-color: var(--prime-sand);

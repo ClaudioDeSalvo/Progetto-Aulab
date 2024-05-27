@@ -30,7 +30,27 @@
     'Ciao'=>'Hello',
     'Esci'=>'Exit',
     'Cancella il tuo profilo'=>'Delete your profile',
-    ''=>'',
-  
-    
-    ];
+    'Risultati per'=>'Results for',
+    // SEZIONE CATEGORIE
+    'Azione'=>'Action',
+    'JRPG'=>'JRPG',
+    'Sparatutto'=>'Shooter',
+    'Strategici'=>' Strategic',
+    'Puzzle'=>'Puzzle',
+    'Arcade'=>'Arcade',
+    'Avventura'=>'Adventure',
+    'Sport'=>'Sport',
+    'Motori'=>'Engines',
+    'Platform'=>'Platform',
+    // SEZIONE FOOTER
+    'Link Utili'=>'Useful Links',
+    'Chi siamo'=>'About us',
+    'Lavora con noi'=>'Work with us',
+    'Assistenza'=>'Support',
+    'Aiuto'=>'Help',
+    'Rimani connesso ai nostri social networks'=>'Keep connected with our social networks',
+    'Giovani developer, affettati, bisunti e trasudanti'=>'Young developers, affected, greasy and oozing',
+    'Contatti'=>'Contacts',
+    "Dettaglio dell'annuncio :"=>'Announcement details :',
+    'Vai ai dettagli'=>'Go to details',
+];

@@ -2,7 +2,8 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="display-1 h1-alt">{{$categoryName}}</h1>
+                <h1 class="display-1 h1-alt">{{__("ui.$categoryName")}}
+                </h1>
             </div>
         </div>
     </div>
@@ -19,7 +20,7 @@
                             <p class="card-text">{{ $announcement->created_at }}</p>
                             <p class="card-text">{{ $announcement->user->name }}</p>
                             <a href="{{ route('announcement.show', compact('announcement')) }}"
-                                class="button-74 mb-2">Vai ai dettagli</a>
+                                class="button-74 mb-2">{{__('ui.Vai ai dettagli')}}</a>
                         </div>
                     </div>
                 </div>

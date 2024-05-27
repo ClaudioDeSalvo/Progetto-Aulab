@@ -4,7 +4,7 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
-            <span><i class="fa-solid fa-share-nodes"></i> Rimani connesso ai nostri social networks:</span>
+            <span><i class="fa-solid fa-share-nodes"></i> {{__('ui.Rimani connesso ai nostri social networks')}} :</span>
         </div>
         <!-- Left -->
 
@@ -45,7 +45,7 @@
                         <i class="fas fa-gem me-3"></i>Prosciutti CRUD
                     </h6>
                     <p>
-                        Giovani developer, affettati, bisunti e trasudanti.
+                        {{__('ui.Giovani developer, affettati, bisunti e trasudanti')}}
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -81,20 +81,19 @@
                 <!-- Grid column -->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-start">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Link Utili
+                    <h6 class="text-uppercase fw-bold mb-4"> {{__('ui.Link Utili')}}
                     </h6>
                     <p>
-                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-regular fa-eye"></i> Chi Siamo</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-regular fa-eye"></i> {{__('ui.Chi siamo')}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-briefcase"></i> Lavora Con Noi</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-briefcase"></i> {{__('ui.Lavora con noi')}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-handshake-angle"></i> Assistenza</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-handshake-angle"></i> {{__('ui.Assistenza')}}</a>
                     </p>
                     <p>
-                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-info"></i> Aiuto</a>
+                        <a href="#!" class="ancor-Footer text-reset"><i class="fa-solid fa-info"></i> {{__('ui.Aiuto')}}</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -102,7 +101,7 @@
                 <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <h6 class="text-uppercase fw-bold mb-4"> {{__('ui.Contatti')}}</h6>
                     <p><i class="fas fa-home me-3"></i> Isola di Montecristo , Li 57127, IT</p>
                     <p>
                         <i class="fas fa-envelope me-3"></i>

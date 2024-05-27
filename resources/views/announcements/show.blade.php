@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="dispay-2 mt-3">Dettaglio dell'annuncio {{ $announcement->title }}</h1>
+                <h1 class="dispay-2 mt-3">{{__("ui.Dettaglio dell'annuncio :")}} {{ $announcement->title }}</h1>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="display-1 h1-alt">Risultati per: {{$query}}</h1>
+                <h1 class="display-1 h1-alt">{{__('ui.Risultati per')}}: {{$query}}</h1>
             </div>
         </div>
     </div>

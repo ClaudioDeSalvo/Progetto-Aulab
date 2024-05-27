@@ -14,12 +14,9 @@
     {{-- LOGO HEADER --}}
     <div class="container-fluid">
         <div class="row d-flex flex-column align-items-center justify-content-center header">
-            <div class="col-12 align-items-center d-flex justify-content-center " data-aos="fade-up" data-aos-duration="1500">
-                <img src="/storage/img/logo.png" alt="">
+            <div class="col-12 align-items-center d-flex justify-content-center ">
             </div>
-            <div class="col-6 text-center justify-content-center">
-                <h1 data-aos="fade-up" data-aos-duration="1500" class="logo-text">Memorabilia Store</h1>
-                <h2 data-aos="fade-up" data-aos-duration="1500" class="logo-text">An offer you can't refuse</h2>
+            <div class="col-6 text-center justify-content-center"> 
             </div>
         </div>
     </div>
@@ -29,7 +26,7 @@
     <div class="container-fluid backgroundVinile">
         <div class="row justify-content-center">
             <div class="col-4 p-0 " data-aos="fade-right" data-aos-duration="1500">
-                <img src="/storage/img/vinile_arancio_dx.png" alt="vinile sx" class="vinileHome">
+                <img src="/storage/img/yellowlogo.png" alt="vinile sx" class="vinileHome">
             </div>
             <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center">
                 <div>

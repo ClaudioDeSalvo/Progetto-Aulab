@@ -30,6 +30,28 @@
     'Ciao'=>'Hola',
     'Esci'=>'Sales',
     'Cancella il tuo profilo'=>'Eliminar tu perfil',
-    ''=>'',
-    
+    'Risultati per'=>'Resultados para',
+    // SEZIONE CATEGORIE
+    'Azione'=>'Acción',
+    'JRPG'=>'JRPG',
+    'Sparatutto'=>'Tirador',
+    'Strategici'=>'Estratégico',
+    'Puzzle'=>'Rompecabezas',
+    'Arcade'=>'Arcada',
+    'Avventura'=>'Aventura',
+    'Sport'=>'Deporte',
+    'Motori'=>'Motores',
+    'Platform'=>'Plataforma',
+
+    // FOOTER
+    'Link Utili'=>'Enlaces útiles',
+    'Chi siamo'=>'Somos',
+    'Lavora con noi'=>'Trabaja con nosotros',
+    'Assistenza'=>'Asistencia',
+    'Aiuto'=>'Ayuda',
+    'Rimani connesso ai nostri social networks'=>'Seguinos en nuestras redes sociales',
+    'Giovani developer, affettati, bisunti e trasudanti'=>'Jóvenes desarrolladores, afectados, grasientos y supurantes',
+    'Contatti'=>'Contactos',
+    "Dettaglio dell'annuncio :"=>'Detalles del anuncio :',
+    'Vai ai dettagli'=>'Ir a los detalles',
     ];

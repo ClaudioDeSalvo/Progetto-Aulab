@@ -1,9 +1,9 @@
 <div>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg my-0 p-0">
         <div class="container-fluid">
             {{-- HOME --}}
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="/storage/img/logo.png" class="imgNav" alt="">
+                <img src="/storage/img/logoblack.png" class="imgNav" alt="">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -12,9 +12,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto">
                     {{-- all the products --}}
-                    <li class="nav-item SMN_effect-44">
+                    <li class="nav-item">
                         <a class="nav-link @if (Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
                             href="{{ route('announcement.indexAll') }}">{{ __('ui.Articoli') }}</a>
                     </li>
@@ -35,7 +35,7 @@
                         <a class="nav-link @if (Route::currentRouteName() == 'announcement.index') active @endif dropdown-toggle"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @if (Route::currentRouteName() == 'announcement.index')
-                                {{ $categoryName }}
+                            {{__("ui.$categoryName")}}
                             @else
                                 {{ __('ui.Categorie') }}
                             @endif
@@ -43,7 +43,8 @@
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
                                 <li><a class="dropdown-item"
-                                        href="{{ route('announcement.index', [$category, 'categoryName' => $category->name]) }}">{{ $category->name }}</a>
+                                        href="{{ route('announcement.index', [$category, 'categoryName' => $category->name]) }}">{{__("ui.$category->name")}}
+                                    </a>
                                 </li>
                             @endforeach
                         </ul>
@@ -99,10 +100,10 @@
                     @endguest
                 </ul>
                 {{-- SEARCH ZONE --}}
-                <form class="d-flex mx-3" role="search" action="{{ route('announcement.search') }}" method="GET">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                <form class="d-flex mx-3 mt-3" role="search" action="{{ route('announcement.search') }}" method="GET">
+                    <input class="form-control me-2 searchResize" type="search" placeholder="Search" aria-label="Search"
                         name="query">
-                    <button class="btn btn-success" type="submit">{{ __('ui.Cerca') }}</button>
+                    <button class="btn btn-dark searchResize" type="submit">{{ __('ui.Cerca') }}</button>
                 </form>
 
                 <div class="nav-item dropdown lang-item">

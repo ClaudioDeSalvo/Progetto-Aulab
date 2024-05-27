@@ -26,16 +26,16 @@ class DatabaseSeeder extends Seeder
 
         $categories =
             [
-                'Sport e viaggi',
-                'Cinema e serie tv',
-                'Casa, arredamento e bricolage',
-                'Gastronomia',
-                'Videogames e console',
-                'Abbigliamento',
-                'Telefonia',
-                'Arte e Antiquariato',
+                'Azione',
+                'JRPG',
+                'Sparatutto',
+                'Strategici',
+                'Puzzle',
+                'Arcade',
+                'Avventura',
+                'Sport',
                 'Motori',
-                'Bellezza e salute'
+                'Platform',
             ];
 
         foreach ($categories as $category) {
