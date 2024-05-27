@@ -108,6 +108,17 @@ h1 {
     --bs-dropdown-padding-y: 0;
     --bs-dropdown-padding-x: 0;
 }
+.dropdown-menu{
+    margin: 0;
+    padding: 0;
+}
+.dropdown-item{
+    background-color: var(--aulab-yellow);
+}
+.dropdown-divider{
+    background-color: var(--aulab-yellow);
+    margin: 0;
+}
 
 .btnlocal {
     border: none;
