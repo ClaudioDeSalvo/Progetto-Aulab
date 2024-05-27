@@ -8,6 +8,11 @@
             </ul>
         </div>
     @endif
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
     <h1 class="text-center my-5 pt-5">{{ __('ui.Crea annuncio') }}</h1>
     <div id="announcementCreate" class="row justify-content-center align-item-center">
         <div class="col-8 creationForm rounded">
@@ -35,8 +40,8 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">{{ __('ui.Corpo del testo') }}</label>
-                    <textarea class="form-control resizeCustom @error('body') is-invalid @enderror" name="body" wire:model.blur="body" id=""
-                        cols="30" rows="10"></textarea>
+                    <textarea class="form-control resizeCustom @error('body') is-invalid @enderror" name="body" wire:model.blur="body"
+                        id="" cols="30" rows="10"></textarea>
                     <div>
                         @error('body')
                             <span class="error bg-danger">{{ $message }}</span>
@@ -52,12 +57,12 @@
                             <span class="error bg-danger">{{ $message }}</span>
                         @enderror
                     </div>
-                </div> 
+                </div>
                 <div class="mb-3">
                     <label class="form-label">Img</label>
                     <input id="imgInput" wire:model.live="temporary_imgs" multiple type="file"
                         class="form-control @error('temporary_imgs.*') is-invalid @enderror" name="img">
-                        
+
                     <div>
                         @error('temporary_imgs.*')
                             <span class="error bg-danger">{{ $message }}</span>
@@ -68,7 +73,7 @@
                     </div>
                     <div id="uploadSwitch" class="row d-none justify-content-center position-relative">
                         <div class="col-12 col-md-6">
-                            <span  class="loader ms-0"></span>
+                            <span class="loader ms-0"></span>
                         </div>
                     </div>
                     @if (!empty($imgs))

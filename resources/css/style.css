@@ -240,12 +240,15 @@ h2 {
 /* Sezione annuncio */
 .vinileHome {
     height: 600px;
+    filter: drop-shadow(-2rem -1.5rem 2rem #a325caa4);
 }
 
 .backgroundVinile {
     border-color: var(--aulab-yellow);
     color: var(--aulab-yellow);
+    
 }
+
 
 /* BTN CREA ANNUNCIUO */
 .button-74 {
@@ -328,10 +331,11 @@ h2 {
 
 /* COLORI PAGINATION*/
 .pagination {
-    --bs-pagination-color: var(--light-black);
-    --bs-pagination-bg: var(--prime-sand);
-    --bs-pagination-active-bg: var(--light-black);
-    --bs-pagination-disabled-bg: var(--prime-sand);
+    --bs-pagination-color: var(--aulab-yellow);
+    --bs-pagination-bg: var(--light-black);
+    --bs-pagination-active-bg: var(--aulab-yellow);
+    --bs-pagination-disabled-bg: var(--light-black);
+    --bs-pagination-active-color: var(--light-black);
 }
 
 /* SEARCH NAVBAR */

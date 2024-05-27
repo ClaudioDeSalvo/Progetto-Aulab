@@ -24,10 +24,14 @@
                             <li class="nav-item">
                                 <a class="nav-link btn btn-outline success btn-sm position-relative w-sm-25 text-start @if (Route::currentRouteName() == 'revisor.index') active @endif"
                                     href="{{ route('revisor.index') }}">{{ __('ui.Zona revisore') }}
-                                    <span
-                                        class="position-absolute top-0 start- translate-middle badge rounded-pill bg-danger
-                                    @if (\App\Models\Announcement::toBeRevisedCount() <= 0) d-none @endif">{{ \App\Models\Announcement::toBeRevisedCount() }}</span></a>
-                            </li>
+                                    @if (Route::currentRouteName() != 'revisor.index')
+                                        <span
+                                            class="position-absolute top-0 start- translate-middle badge rounded-pill bg-dark
+                                    @if (\App\Models\Announcement::toBeRevisedCount() <= 0) d-none @endif">{{ \App\Models\Announcement::toBeRevisedCount() }}</span>
+                                </a>
+                        @endif
+                        </a>
+                        </li>
                         @endif
                     @endauth
                     {{-- DROPDOWN CATEGORIE --}}
@@ -35,7 +39,7 @@
                         <a class="nav-link @if (Route::currentRouteName() == 'announcement.index') active @endif dropdown-toggle"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @if (Route::currentRouteName() == 'announcement.index')
-                            {{__("ui.$categoryName")}}
+                                {{ __("ui.$categoryName") }}
                             @else
                                 {{ __('ui.Categorie') }}
                             @endif
@@ -43,7 +47,7 @@
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
                                 <li><a class="dropdown-item"
-                                        href="{{ route('announcement.index', [$category, 'categoryName' => $category->name]) }}">{{__("ui.$category->name")}}
+                                        href="{{ route('announcement.index', [$category, 'categoryName' => $category->name]) }}">{{ __("ui.$category->name") }}
                                     </a>
                                 </li>
                             @endforeach
@@ -100,9 +104,10 @@
                     @endguest
                 </ul>
                 {{-- SEARCH ZONE --}}
-                <form class="d-flex mx-3 mt-3" role="search" action="{{ route('announcement.search') }}" method="GET">
-                    <input class="form-control me-2 searchResize" type="search" placeholder="Search" aria-label="Search"
-                        name="query">
+                <form class="d-flex mx-3 mt-3" role="search" action="{{ route('announcement.search') }}"
+                    method="GET">
+                    <input class="form-control me-2 searchResize" type="search" placeholder="Search"
+                        aria-label="Search" name="query">
                     <button class="button-74 searchResize" type="submit">{{ __('ui.Cerca') }}</button>
                 </form>
 
