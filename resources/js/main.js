@@ -46,8 +46,8 @@ document.addEventListener("scroll", function() {
     let observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting && check) {
-                createInterval(600, document.getElementById('firstNumber'), 20);
-                createInterval(1000, document.getElementById('secondNumber'), 10);
+                createInterval(600, document.getElementById('firstNumber'), 10);
+                createInterval(1000, document.getElementById('secondNumber'), 5);
                 createInterval(50, document.getElementById('thirdNumber'), 100);
                 
             }

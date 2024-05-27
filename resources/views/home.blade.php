@@ -17,7 +17,7 @@
             <div class="col-12 d-flex flex-column justify-content-center align-items-center header">
 
                 <h1 class="glitch">CyberPresto</h1>
-                <h3 class="yellowFont bold">games</h3>
+                <h3 class="yellowFont bold">games©</h3>
 
             </div>
         </div>
@@ -51,11 +51,11 @@
                     src="../imgs/android.png" alt="">
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-center flex-column text-center text-md-start">
-                <h2 class="font-title display-2 glitch"> Un pò di numeri </h2>
+                <h2 class="font-title display-2 glitch">    Un pò di numeri </h2>
                 <p class="my-3 fs-4 yellowFont"><span id="firstNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
                     Giochi venduti </p>
                 <p class="my-3 fs-4 yellowFont"><span id="secondNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
-                    Clienti
+                        Clienti
                     soddisfatti</p>
                 <p class="my-3 fs-4 yellowFont"><span id="thirdNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
                     Recensioni ricevute
