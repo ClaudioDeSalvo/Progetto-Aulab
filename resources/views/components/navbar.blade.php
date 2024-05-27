@@ -109,14 +109,13 @@
                 <div class="nav-item dropdown lang-item">
                 
                     <button class="btnlocal" data-bs-toggle="dropdown" aria-expanded="false">
-
-                        @if(Articoli == 'Articoli')
+                        @if(__('ui.Articoli') == 'Articoli')
                         <img src="{{ asset('vendor/blade-flags/language-' . 'it' . '.svg') }}" alt=""
                             width="32" height="32" class="" />
-                        @elseif (_('ui.Articoli') == 'Articulos')
+                        @elseif (__('ui.Articoli') == 'Artículos')
                         <img src="{{ asset('vendor/blade-flags/language-' . 'es' . '.svg') }}" alt=""
                             width="32" height="32" class="" />
-                        @else
+                        @elseif (__('ui.Articoli') == 'Articles')
                         <img src="{{ asset('vendor/blade-flags/language-' . 'en' . '.svg') }}" alt=""
                             width="32" height="32" class="" />
                         @endif
