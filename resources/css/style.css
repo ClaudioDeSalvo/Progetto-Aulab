@@ -170,7 +170,7 @@ h2{
 
 /* BTN CREA ANNUNCIUO */
 .button-74 {
-    border: 1px solid #38bdf8;
+    border: 1px solid var(--aulab-yellow);
     border-radius: 0.3em;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -184,7 +184,7 @@ h2{
 }
 
 .button-74:hover {
-    box-shadow: 0px 2px 24px 2px rgba(3, 140, 220, .6);
+    box-shadow: 0px 2px 24px 2px var(--aulab-yellow);
 }
 
 /* CAROUSEL DETTAGLIO  */
@@ -244,7 +244,6 @@ h2{
 
 /* FORM CREAZIONE ANNUNCI */
 .creationForm {
-    background-color: var(--aulab-yellow);
     margin-bottom: 40px;
 }
 
