@@ -13,13 +13,13 @@ if (announcementCreate) {
             if (imgInput.files.length > 0) {
                 btnCustom.style.display = "none";
                 uploadSwitch.classList.replace("d-none", "d-block");
-            } else{
+            } else {
                 btnCustom.style.display = "block";
                 uploadSwitch.classList.replace("d-block", "d-none");
             }
 
         });
-        
+
     });
 
     btnCustom.addEventListener("click", function () {
@@ -27,7 +27,8 @@ if (announcementCreate) {
     });
 }
 
-document.addEventListener("scroll", function() {
+let home = document.querySelector('#home');
+if (home) {
     // Function to create the interval for counting
     function createInterval(total, element, time) {
         let counter = 0;
@@ -42,19 +43,24 @@ document.addEventListener("scroll", function() {
     }
 
     // Initialize the observer and counters
+    let firstNumber = document.querySelector('#firstNumber');
+    let secondNumber = document.querySelector('#secondNumber');
+    let thirdNumber = document.querySelector('#thirdNumber');
     let check = true;
     let observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting && check) {
-                createInterval(600, document.getElementById('firstNumber'), 10);
-                createInterval(1000, document.getElementById('secondNumber'), 5);
-                createInterval(50, document.getElementById('thirdNumber'), 100);
-                
+                createInterval(600, firstNumber, 10);
+                createInterval(1000, secondNumber, 5);
+                createInterval(50, thirdNumber, 100);
+                check = false;
+                setTimeout(() => {
+                    check = true;
+                }, 8000);
             }
         });
     });
 
     // Assuming 'thirdNumber' is the element to observe
-    let thirdNumber = document.getElementById('thirdNumber');
     observer.observe(thirdNumber);
-});
+}

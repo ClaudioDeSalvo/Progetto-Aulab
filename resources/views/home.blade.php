@@ -12,7 +12,7 @@
     @endif
 
     {{-- LOGO HEADER --}}
-    <section class="container-fluid">
+    <section id="home" class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center header">
 
