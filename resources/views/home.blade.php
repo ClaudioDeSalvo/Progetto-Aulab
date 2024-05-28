@@ -26,19 +26,17 @@
 
     {{-- VINYL + BTN SECTION --}}
     <div class="container-fluid backgroundVinile ">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-4 p-0 " data-aos="fade-right" data-aos-duration="1500">
                 <img src="/storage/img/yellowlogo.png" alt="vinile sx" class="vinileHome">
             </div>
-            <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center">
-                <div>
+                <div class="col-8 p-0 d-flex flex-column justify-content-center align-items-center">
                     <h1>{{ __('ui.Crea qui il tuo annuncio') }}</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequuntur hic aliquam ex
                         perspiciatis est necessitatibus. Soluta deleniti ipsum tenetur accusamus eum libero odit
                         eveniet? Ut porro nobis illo distinctio.</p>
-                    <a class="btn button-74" href="{{ route('announcement.create')}}">{{ __('ui.Crea annuncio') }}</a>
+                    <a class="button-74" href="{{ route('announcement.create')}}">{{ __('ui.Crea annuncio') }}</a>
                 </div>
-            </div>
         </div>
     </div>
 
