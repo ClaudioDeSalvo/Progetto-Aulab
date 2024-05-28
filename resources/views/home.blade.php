@@ -43,21 +43,16 @@
     </div>
 
     {{-- I NOSTRI NUMERI --}}
-    <section class="container-fluid" id="numbersSection">
+    <section class="container-fluid my-5 p-5" id="numbersSection">
         <div class="row justify-content-between bg-darkBlue flex-column-reverse flex-md-row">
-            <!-- Immagine di sinistra -->
-            <div class="col-12 col-md-3 ps-0">
-                <img data-aos="fade-right" data-aos-duration="1000" class="img-fluid numbers-img"
-                    src="../imgs/android.png" alt="">
-            </div>
-            <div class="col-12 col-md-6 d-flex justify-content-center flex-column text-center text-md-start">
-                <h2 class="font-title display-2 glitch"> Un pò di numeri </h2>
-                <p class="my-3 fs-4 yellowFont"><span id="firstNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
+            <div class="col-12">
+                <h2 class="font-title display-2 glitch text-center"> Un pò di numeri </h2>
+                <p class="my-3 fs-4 yellowFont  text-center"><span id="firstNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
                     Giochi venduti </p>
-                <p class="my-3 fs-4 yellowFont"><span id="secondNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
+                <p class="my-3 fs-4 yellowFont  text-center"><span id="secondNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
                     Clienti
                     soddisfatti</p>
-                <p class="my-3 fs-4 yellowFont"><span id="thirdNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
+                <p class="my-3 fs-4 yellowFont  text-center"><span id="thirdNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
                     Recensioni ricevute
                 </p>
             </div>
