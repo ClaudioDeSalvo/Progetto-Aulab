@@ -8,7 +8,10 @@ use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionSafeSearch;
+<<<<<<< HEAD
 use App\Jobs\GoogleVisionLabelImage;
+=======
+>>>>>>> 8d5ef74a6f8f10e41828d3ad2186adbe88a1b450
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -89,6 +92,7 @@ class AnnouncementForm extends Component
             foreach ($this->imgs as $img) {
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $img->store($newFileName, 'public')]);
+<<<<<<< HEAD
                 // dispatch(new ResizeImage($newImage->path, 300, 300));
                 // dispatch(new ResizeImage($newImage->path, 300, 300)));
                 RemoveFaces::withChain([
@@ -96,6 +100,10 @@ class AnnouncementForm extends Component
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
+=======
+                dispatch(new ResizeImage($newImage->path, 300, 300));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
+>>>>>>> 8d5ef74a6f8f10e41828d3ad2186adbe88a1b450
             }
         } else {
             $this->announcement->images()->create(['path' => 'public/img/annunciodefault.jpg']);
