@@ -162,7 +162,8 @@ h1 {
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--aulab-yellow);
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(245,252,69,1) 100%);
     position: fixed;
     width: 100%;
     top: 0;
@@ -361,7 +362,8 @@ h2 {
 
 /* FOOTER */
 footer {
-    background-color: var(--aulab-yellow);
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(245,252,69,1) 100%);
 }
 
 .ancor-Footer {
