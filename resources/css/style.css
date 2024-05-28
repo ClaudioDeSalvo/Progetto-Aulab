@@ -251,9 +251,14 @@ h2 {
 }
 
 .backgroundVinile {
-    border-color: var(--aulab-yellow);
+    /* border-color: var(--aulab-yellow); */
     color: var(--aulab-yellow);
-
+    background: linear-gradient(45deg, rgba(255, 5, 172, 0.245) 0%, rgba(255, 5, 172, 0.428) 18%, rgba(0, 255, 255, 0.594) 100%);
+    z-index: 9999;
+    box-shadow: 0px 1px 2px var(--aulab-yellow),
+        0px 2px 4px var(--aulab-yellow),
+        0px 4px 8px var(--aulab-yellow),
+        0px 8px 16px var(--aulab-yellow);
 }
 
 
