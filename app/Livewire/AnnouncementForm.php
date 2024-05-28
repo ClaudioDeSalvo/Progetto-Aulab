@@ -3,9 +3,12 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -86,7 +89,13 @@ class AnnouncementForm extends Component
             foreach ($this->imgs as $img) {
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' => $img->store($newFileName, 'public')]);
-                dispatch(new ResizeImage($newImage->path, 300, 300));
+                // dispatch(new ResizeImage($newImage->path, 300, 300));
+                // dispatch(new ResizeImage($newImage->path, 300, 300)));
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 300, 300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
             }
         } else {
             $this->announcement->images()->create(['path' => 'public/img/annunciodefault.jpg']);
