@@ -3,7 +3,7 @@
     return[
     'Articoli'=>'Articles',
     'Categorie'=>'Categories',
-    'Registrati'=>'Sign Up',
+    "Registrati"=>"Sign Up",
     'Accedi'=>'Log In',
     'Cerca'=>'Search',
     'Crea qui il tuo annuncio'=>'Create here your annuncement',

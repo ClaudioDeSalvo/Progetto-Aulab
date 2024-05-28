@@ -3,7 +3,7 @@
     return[
     'Articoli'=>'Artículos',
     'Categorie'=>'Categorias',
-    'Registrati'=>'Iniciar sesión',
+    "Registrati"=>"Iniciar sesión",
     'Accedi'=>'Acceso',
     'Cerca'=>'Cerca',
     'Crea qui il tuo annuncio'=>'Crea tu anuncio aqui',
