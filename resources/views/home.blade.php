@@ -51,11 +51,11 @@
                     src="../imgs/android.png" alt="">
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-center flex-column text-center text-md-start">
-                <h2 class="font-title display-2 glitch">    Un pò di numeri </h2>
+                <h2 class="font-title display-2 glitch"> Un pò di numeri </h2>
                 <p class="my-3 fs-4 yellowFont"><span id="firstNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
                     Giochi venduti </p>
                 <p class="my-3 fs-4 yellowFont"><span id="secondNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
-                        Clienti
+                    Clienti
                     soddisfatti</p>
                 <p class="my-3 fs-4 yellowFont"><span id="thirdNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
                     Recensioni ricevute
@@ -85,7 +85,9 @@
                             <div class="content mb-5">
                                 <h2 class="card-title text-center">{{ $announcements[$i]->title }}</h2>
                                 <p class="card-text">{{ $announcements[$i]->category->name }}</p>
-                                <p class="card-text">{{ $announcements[$i]->user->name }}</p>
+                                @if ($announcements[$i]->user != null)
+                                    <p class="card-text">{{ $announcements[$i]->user->name }}</p>
+                                @endif
                                 <a href="{{ route('announcement.show', ['announcement' => $announcements[$i]]) }}"
                                     class="button-74">Vai ai dettagli</a>
                             </div>

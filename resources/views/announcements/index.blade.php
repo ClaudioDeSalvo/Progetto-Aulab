@@ -19,7 +19,9 @@
                         <div class="content mb-5">
                             <h2 class="card-title text-center">{{ $announcement->title }}</h2>
                             <p class="card-text">{{ $announcement->category->name }}</p>
-                            <p class="card-text">{{ $announcement->user->name }}</p>
+                            @if ($announcement->user_id != null)
+                                <p class="card-text">{{ $announcement->user->name }}</p>
+                            @endif
                             <a href="{{ route('announcement.show', ['announcement' => $announcement]) }}"
                                 class="button-74">Vai ai dettagli</a>
                         </div>

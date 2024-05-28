@@ -2,7 +2,7 @@
     <div class="container-fluid yellowFont">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="dispay-1">{{__('ui.Zona revisore')}}</h1>
+                <h1 class="dispay-1">{{ __('ui.Zona revisore') }}</h1>
                 @if (session('message'))
                     <div class="alert alert-success">
                         {{ session('message') }}
@@ -32,7 +32,9 @@
                 <div class="d-flex flex-column justify-content-center">
                     <h1>{{ __('ui.Titolo') }} : {{ $announcement_to_check->title }}</h1>
                     <h2>{{ __('ui.Sottotitolo') }} : {{ $announcement_to_check->subtitle }}</h2>
-                    <h3>{{ __('ui.Autore') }} : {{ $announcement_to_check->user->name }}</h3>
+                    @if ($announcement_to_check->user_id != null)
+                        <h3>{{ __('ui.Autore') }} : {{ $announcement_to_check->user->name }}</h3>
+                    @endif
                     <h4>{{ __('ui.Prezzo') }} {{ $announcement_to_check->price }} €</h4>
                     <h4># {{ $announcement_to_check->category->name }}</h4>
                     <p>{{ $announcement_to_check->body }}</p>
