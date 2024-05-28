@@ -92,7 +92,7 @@ class AnnouncementForm extends Component
                 // dispatch(new ResizeImage($newImage->path, 300, 300));
                 // dispatch(new ResizeImage($newImage->path, 300, 300)));
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 300, 300),
+                    new ResizeImage($newImage->path, 600, 600),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
