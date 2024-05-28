@@ -27,7 +27,7 @@
 :root {
 
     --aulab-yellow: #f1e82e;
-    --neon-purple: #a425ca;
+    --neon-purple: #520f66;
     --neon-blue: #01aaff;
     --light-greeng: #dde5b6;
     --prime-sand: #f0ead2;
@@ -52,14 +52,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-bottom:3px solid #f1e82e;
+    border-bottom: 3px solid #f1e82e;
 }
 
 h1 {
     color: var(--aulab-yellow);
 }
 
-.yellowFont{
+.yellowFont {
     color: var(--aulab-yellow);
 }
 
@@ -216,6 +216,13 @@ body {
     font-weight: 400;
 }
 
+body::after {
+    background-image: url('/storage/app/public/img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 label {
     color: var(--aulab-yellow);
 }
@@ -246,7 +253,7 @@ h2 {
 .backgroundVinile {
     border-color: var(--aulab-yellow);
     color: var(--aulab-yellow);
-    
+
 }
 
 
@@ -258,7 +265,7 @@ h2 {
     text-transform: uppercase;
     font-weight: 600;
     padding: 0.85em 1.65em;
-    background-color: #000;
+    background-color: var(--neon-purple);
     text-decoration: none;
     box-shadow: 0px 2px 24px 2px rgba(3, 140, 220, .1);
     transition: box-shadow 0.3s;
@@ -362,8 +369,8 @@ footer {
     justify-content: center;
     margin: 40px;
     transition: all 0.5s;
-    background: var(--aulab-yellow);
     color: black;
+
 
     &:hover {
         height: 500px;
@@ -389,6 +396,7 @@ footer {
         bottom: -2px;
         background: white;
         z-index: -1;
+        border-radius: 10px;
 
         background: linear-gradient(45deg, rgba(255, 5, 172, 1) 0%, rgba(255, 5, 172, 1) 18%, rgba(0, 255, 255, 1) 100%);
         /* w3c */
