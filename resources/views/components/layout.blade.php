@@ -12,6 +12,7 @@
         <link href="https://fonts.cdnfonts.com/css/market-deco" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/m-plus-code-latin" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/safilms-crawford" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/cyberway-riders" rel="stylesheet">
         {{-- VITE --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 

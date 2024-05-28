@@ -16,7 +16,7 @@
         <div class="row justify-content-center">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center header">
 
-                <h1 class="glitch">CyberPresto</h1>
+                <h1 class="glitch header-font">CyberPresto</h1>
                 <h3 class="yellowFont bold">games©</h3>
 
             </div>
