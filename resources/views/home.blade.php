@@ -36,7 +36,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequuntur hic aliquam ex
                         perspiciatis est necessitatibus. Soluta deleniti ipsum tenetur accusamus eum libero odit
                         eveniet? Ut porro nobis illo distinctio.</p>
-                    <a class="button-74" href="{{ route('announcement.create') }}">{{ __('ui.Crea annuncio') }}</a>
+                    <a class="btn button-74" href="{{ route('announcement.create')}}">{{ __('ui.Crea annuncio') }}</a>
                 </div>
             </div>
         </div>
