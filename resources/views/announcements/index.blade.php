@@ -13,7 +13,7 @@
                 <div class="col-12 col-md-4 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="3000">
                     <div class="single-card">
                         <div class="card-img ">
-                            <img src="{{ $announcement->images()->first()->getUrl(300, 300) }}"
+                            <img src="{{ $announcement->images()->first()->getUrl(600, 600) }}"
                                 class="card-img-top img-fluid" alt="...">
                         </div>
                         <div class="content mb-5">

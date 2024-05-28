@@ -21,7 +21,7 @@
                     <div class="row justify-content-center">
                         @foreach ($announcement_to_check->images as $key => $image)
                             <div class="col-6 col-md-4 text-center mb-4">
-                                <img src="{{ $image->getUrl(300, 300) }}" alt="Immagine segnaposto"
+                                <img src="{{ $image->getUrl(600, 600) }}" alt="Immagine segnaposto"
                                     class="img-fluid rounded shadow">
                             </div>
                             <div class="col-md-8 ps-3">
