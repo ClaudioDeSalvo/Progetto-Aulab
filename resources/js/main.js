@@ -17,13 +17,7 @@ if (announcementCreate) {
                 btnCustom.style.display = "block";
                 uploadSwitch.classList.replace("d-block", "d-none");
             }
-
         });
-
-    });
-
-    btnCustom.addEventListener("click", function () {
-        window.scrollTo(0, -100);  // Correct way to scroll the window
     });
 }
 
