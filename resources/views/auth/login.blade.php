@@ -3,8 +3,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center mt-5 pt-2">
-                <h1>Accedi</h1>
-                <h2>Riprendi a fare affari!</h2>
+                <h1>{{__('ui.Accedi')}}</h1>
             </div>
         </div>
     </div>

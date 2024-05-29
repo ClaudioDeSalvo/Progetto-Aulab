@@ -51,7 +51,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-start">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-center text-md-start">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         Tools
@@ -79,7 +79,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-start">
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-center text-md-start">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4"> {{__('ui.Link Utili')}}
                     </h6>

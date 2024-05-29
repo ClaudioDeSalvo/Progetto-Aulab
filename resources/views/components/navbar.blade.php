@@ -110,7 +110,7 @@
                     <button class="button-74 searchResize fw-bold" type="submit">{{ __('ui.Cerca') }}</button>
                 </form>
 
-                <div class="nav-item dropdown lang-item">
+                <div class="nav-item dropdown lang-item d-none d-lg-block">
 
                     <button class="btnlocal" data-bs-toggle="dropdown" aria-expanded="false">
                         @if (__('ui.Articoli') == 'Articoli')
