@@ -1,81 +1,93 @@
 <x-layout>
     <div class="container-fluid yellowFont mt-4">
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
+            <div class="col-6 d-flex justify-content-end">
                 <h1 class="dispay-1">{{ __('ui.Zona revisore') }}</h1>
-                @if (session('message'))
-                    <div class="alert alert-success">
-                        {{ session('message') }}
-                    </div>
-                @endif
-                @if (session('error'))
-                    <div class="alert alert-danger">
-                        {{ session('error') }}
-                    </div>
-                @endif
             </div>
+            {{-- Reset button --}}
+            @if (App\Models\Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->count() > 0)
+                <div class="pb-4 col-6 justify-content-start mt-3">
+                    <form action="{{ route('reset') }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="button-74">{{ __('ui.Resetta') }}</button>
+                    </form>
+                </div>
+            @endif
+            {{-- fine button --}}
+            @if (session('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
         </div>
-        @if ($announcement_to_check)
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 col-md-4 text-center">
-                        <div id="carouselExample" class="carousel slide">
-                            <div class="carousel-inner">
-                                @foreach ($announcement_to_check->images as $key => $image)
-                                    <div class="carousel-item @if ($loop->first) active @endif ">
-                                        <span><img src="{{ $image->getUrl(600, 600) }}" alt="Immagine segnaposto"
-                                                class="img-fluid rounded shadow"></span>
-                                        <div>
-                                            <h5>Ratings</h5>
-                                            <div class="row justify-content-center">
-                                                <div class="col-2">Adult</div>
-                                                <div class="col-2">
-                                                    <div class="text-center mx-auto {{ $image->adult }}"></div>
-                                                </div>
+    </div>
+    @if ($announcement_to_check)
+        <div class="container-fluid d-flex">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            @foreach ($announcement_to_check->images as $key => $image)
+                                <div class="carousel-item @if ($loop->first) active @endif ">
+                                    <span><img src="{{ $image->getUrl(600, 600) }}" alt="Immagine segnaposto"
+                                            class="img-fluid rounded shadow"></span>
+                                    <div>
+                                        <h5>Ratings</h5>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">Adult</div>
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto {{ $image->adult }}"></div>
                                             </div>
-                                            <div class="row justify-content-center">
-                                                <div class="col-2">Violence</div>
-                                                <div class="col-2">
-                                                    <div class="text-center mx-auto {{ $image->violence }}"></div>
-                                                </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">Violence</div>
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto {{ $image->violence }}"></div>
                                             </div>
-                                            <div class="row justify-content-center">
-                                                <div class="col-2">Spoof</div>
-                                                <div class="col-2">
-                                                    <div class="text-center mx-auto {{ $image->spoof }}"></div>
-                                                </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">Spoof</div>
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto {{ $image->spoof }}"></div>
                                             </div>
-                                            <div class="row justify-content-center">
-                                                <div class="col-2">Racy</div>
-                                                <div class="col-2">
-                                                    <div class="text-center mx-auto {{ $image->racy }}"></div>
-                                                </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">Racy</div>
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto {{ $image->racy }}"></div>
                                             </div>
-                                            <div class="row justify-content-center">
-                                                <div class="col-2">Medical</div>
-                                                <div class="col-2">
-                                                    <div class="text-center mx-auto {{ $image->medical }}"></div>
-                                                </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">Medical</div>
+                                            <div class="col-2">
+                                                <div class="text-center mx-auto {{ $image->medical }}"></div>
                                             </div>
                                         </div>
                                     </div>
-                                @endforeach
-                            </div>
-                            @if ($announcement_to_check->images->count() > 1)
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            @endif
+                                </div>
+                            @endforeach
                         </div>
+                        @if ($announcement_to_check->images->count() > 1)
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        @endif
                     </div>
                 </div>
+            </div>
 
             <div class="col-12 col-md-4 mt-4 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column justify-content-center">
@@ -108,21 +120,9 @@
                     <a href="{{ route('home') }}">{{ __('ui.Torna alla Homepage') }}</a>
                 </div>
             </div>
-            @endif
-        
-            {{-- Reset button --}}
-            @if (App\Models\Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->count() > 0)
-                <div class="d-flex pb-4 justify-content-center">
-                    <form action="{{ route('reset') }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="button-74">{{ __('ui.Resetta') }}</button>
-                    </form>
-            @endif
-            </div>
-
+    @endif
     </div>
-</div>
+    </div>
 
     {{-- @if ($announcement_to_check)
             <div class="row justify-content-center pt-5">
@@ -140,6 +140,6 @@
                     </div>
                 </div>
             </div> --}}
-    
+
 
 </x-layout>
