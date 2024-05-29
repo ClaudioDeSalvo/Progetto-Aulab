@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid yellowFont">
+    <div class="container-fluid yellowFont mt-4">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="dispay-1">{{ __('ui.Zona revisore') }}</h1>
@@ -16,55 +16,68 @@
             </div>
         </div>
         @if ($announcement_to_check)
-            <div class="row justify-content-center pt-5">
-                <div class="col-md-8">
-                    <div class="row justify-content-center">
-                        @foreach ($announcement_to_check->images as $key => $image)
-                            <div class="col-6 col-md-4 text-center mb-4">
-                                <img src="{{ $image->getUrl(600, 600) }}" alt="Immagine segnaposto"
-                                    class="img-fluid rounded shadow">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-4 text-center">
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                                @foreach ($announcement_to_check->images as $key => $image)
+                                    <div class="carousel-item @if ($loop->first) active @endif ">
+                                        <span><img src="{{ $image->getUrl(600, 600) }}" alt="Immagine segnaposto"
+                                                class="img-fluid rounded shadow"></span>
+                                        <div>
+                                            <h5>Ratings</h5>
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">Adult</div>
+                                                <div class="col-2">
+                                                    <div class="text-center mx-auto {{ $image->adult }}"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">Violence</div>
+                                                <div class="col-2">
+                                                    <div class="text-center mx-auto {{ $image->violence }}"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">Spoof</div>
+                                                <div class="col-2">
+                                                    <div class="text-center mx-auto {{ $image->spoof }}"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">Racy</div>
+                                                <div class="col-2">
+                                                    <div class="text-center mx-auto {{ $image->racy }}"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-2">Medical</div>
+                                                <div class="col-2">
+                                                    <div class="text-center mx-auto {{ $image->medical }}"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                            <div class="col-md-8 ps-3">
-                                <div class="card-body">
-                                    <h5>Ratings</h5>
-                                        <div class="row justify-content-center">
-                                            <div class="col-2">
-                                                <div class="text-center mx-auto {{ $image->adult }}"></div>
-                                            </div>
-                                            <div class="col-10">adult</div>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <div class="col-2">
-                                                <div class="text-center mx-auto {{ $image->violence }}"></div>
-                                            </div>
-                                            <div class="col-10">violence</div>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <div class="col-2">
-                                                <div class="text-center mx-auto {{ $image->spoof }}"></div>
-                                            </div>
-                                            <div class="col-10">spoof</div>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <div class="col-2">
-                                                <div class="text-center mx-auto {{ $image->racy }}"></div>
-                                            </div>
-                                            <div class="col-10">racy</div>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <div class="col-2">
-                                                <div class="text-center mx-auto {{ $image->medical }}"></div>
-                                            </div>
-                                            <div class="col-10">medical</div>
-                                        </div>
-                                    
-                                </div>
-                            </div>
-                        @endforeach
+                            @if ($announcement_to_check->images->count() > 1)
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            @endif
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 ps-4 d-flex flex-column align-items-center">
+
+            <div class="col-12 col-md-4 mt-4 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column justify-content-center">
                     <h1>{{ __('ui.Titolo') }} : {{ $announcement_to_check->title }}</h1>
                     <h2>{{ __('ui.Sottotitolo') }} : {{ $announcement_to_check->subtitle }}</h2>
@@ -79,12 +92,12 @@
                     <form action="{{ route('accept', ['announcement' => $announcement_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-success mx-3">{{ __('ui.Approva') }}</button>
+                        <button type="submit" class="button-74 mx-5 mt-4">{{ __('ui.Approva') }}</button>
                     </form>
                     <form action="{{ route('reject', ['announcement' => $announcement_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger">{{ __('ui.Rifiuta') }}</button>
+                        <button type="submit" class="button-74 mx-5 mt-4">{{ __('ui.Rifiuta') }}</button>
                     </form>
                 </div>
             </div>
@@ -95,16 +108,38 @@
                     <a href="{{ route('home') }}">{{ __('ui.Torna alla Homepage') }}</a>
                 </div>
             </div>
-        @endif
+            @endif
+        
+            {{-- Reset button --}}
+            @if (App\Models\Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->count() > 0)
+                <div class="d-flex pb-4 justify-content-center">
+                    <form action="{{ route('reset') }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="button-74">{{ __('ui.Resetta') }}</button>
+                    </form>
+            @endif
+            </div>
 
-        {{-- Reset button --}}
-        @if (App\Models\Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->count() > 0)
-            <form action="{{ route('reset') }}" method="POST">
-                @csrf
-                @method('PATCH')
-                <button type="submit" class="button-74">{{ __('ui.Resetta') }}</button>
-            </form>
-        @endif
     </div>
+</div>
+
+    {{-- @if ($announcement_to_check)
+            <div class="row justify-content-center pt-5">
+                <div class="col-12 col-md-8">
+                    <div class="row justify-content-center">
+                        @foreach ($announcement_to_check->images as $key => $image)
+                            <div class="col-md-4 text-center mb-4">
+                                <img src="{{ $image->getUrl(600, 600) }}" alt="Immagine segnaposto"
+                                    class="img-fluid rounded shadow">
+                            </div>
+                            <div class="col-md-8 ps-3">
+                                
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div> --}}
+    
 
 </x-layout>
