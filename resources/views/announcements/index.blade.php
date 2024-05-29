@@ -23,7 +23,7 @@
                                 <p class="card-text">{{ $announcement->user->name }}</p>
                             @endif
                             <a href="{{ route('announcement.show', ['announcement' => $announcement]) }}"
-                                class="button-74">Vai ai dettagli</a>
+                                class="button-74">{{ __('ui.Dettagli') }}</a>
                         </div>
                     </div>
                 </div>

@@ -31,6 +31,7 @@
     'Esci'=>'Sales',
     'Cancella il tuo profilo'=>'Eliminar tu perfil',
     'Risultati per'=>'Resultados para',
+    'Dettagli'=>'Detalles',
     // SEZIONE CATEGORIE
     'Azione'=>'Acción',
     'JRPG'=>'JRPG',
@@ -42,7 +43,6 @@
     'Sport'=>'Deporte',
     'Motori'=>'Motores',
     'Platform'=>'Plataforma',
-
     // FOOTER
     'Link Utili'=>'Enlaces útiles',
     'Chi siamo'=>'Somos',
@@ -54,4 +54,11 @@
     'Contatti'=>'Contactos',
     "Dettaglio dell'annuncio :"=>'Detalles del anuncio :',
     'Vai ai dettagli'=>'Ir a los detalles',
+    // SEZIONE NUMERI INCREMENTALI
+    'Un pò di numeri'=>'Algunos numeros',
+    'Giochi venduti'=>'Juegos vendidos',
+    'Clienti soddisfatti'=>'Clientes satisfechos',
+    "Recensioni ricevute"=>"Reseñas recibidas",
+    // PAGINA 404
+    "OOOOOPS! Qualcosa è andato storto!"=>"¡OOOOOPS! ¡Algo salió mal!"
     ];

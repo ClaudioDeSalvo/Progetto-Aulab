@@ -5,7 +5,6 @@
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="/storage/img/logoblack.png" class="imgNav" alt="">
             </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -13,16 +12,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
-                    {{-- all the products --}}
-                    <li class="nav-item">
-                        <a class="nav-link @if (Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
+                    {{-- TUTTI I PORDOTTI  --}}
+                    <li class="nav-item mx-1">
+                        <a class="nav-link fw-bold @if (Route::currentRouteName() == 'announcement.indexAll') active @endif" aria-current="page"
                             href="{{ route('announcement.indexAll') }}">{{ __('ui.Articoli') }}</a>
                     </li>
                     {{-- SEZIONI REVISOR --}}
                     @auth
                         @if (Auth::user()->is_revisor)
-                            <li class="nav-item">
-                                <a class="nav-link btn btn-outline success btn-sm position-relative w-sm-25 text-start @if (Route::currentRouteName() == 'revisor.index') active @endif"
+                            <li class="nav-item mx-1">
+                                <a class="nav-link fw-bold  btn btn-outline success btn-sm position-relative w-sm-25 text-start @if (Route::currentRouteName() == 'revisor.index') active @endif"
                                     href="{{ route('revisor.index') }}">{{ __('ui.Zona revisore') }}
                                     @if (Route::currentRouteName() != 'revisor.index')
                                         <span
@@ -35,8 +34,8 @@
                         @endif
                     @endauth
                     {{-- DROPDOWN CATEGORIE --}}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link @if (Route::currentRouteName() == 'announcement.index') active @endif dropdown-toggle"
+                    <li class="nav-item dropdown mx-1">
+                        <a class="nav-link fw-bold  @if (Route::currentRouteName() == 'announcement.index') active @endif dropdown-toggle"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @if (Route::currentRouteName() == 'announcement.index')
                                 {{ __("ui.$categoryName") }}
@@ -46,7 +45,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
-                                <li><a class="dropdown-item"
+                                <li><a class="dropdown-item fw-bold "
                                         href="{{ route('announcement.index', [$category, 'categoryName' => $category->name]) }}">{{ __("ui.$category->name") }}
                                     </a>
                                 </li>
@@ -54,35 +53,35 @@
                         </ul>
                     </li>
                     @guest
-                        {{-- register --}}
-                        <li class="nav-item">
-                            <a class="nav-link @if (Route::currentRouteName() == 'register') active @endif"
+                        {{-- REGISTRATI --}}
+                        <li class="nav-item mx-1">
+                            <a class="nav-link fw-bold  @if (Route::currentRouteName() == 'register') active @endif"
                                 href="{{ route('register') }}">{{ __('ui.Registrati') }}</a>
                         </li>
-                        {{-- log in --}}
-                        <li class="nav-item">
-                            <a class="nav-link @if (Route::currentRouteName() == 'login') active @endif"
+                        {{-- LOG IN --}}
+                        <li class="nav-item mx-1">
+                            <a class="nav-link fw-bold  @if (Route::currentRouteName() == 'login') active @endif"
                                 href="{{ route('login') }}">{{ __('ui.Accedi') }}</a>
                         </li>
                     @else
-                        {{-- user actions --}}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link @if (Route::currentRouteName() == 'revisor.request' || Route::currentRouteName() == 'announcement.create') active @endif dropdown-toggle"
+                        {{-- USER SECTION --}}
+                        <li class="nav-item dropdown mx-1">
+                            <a class="nav-link fw-bold  @if (Route::currentRouteName() == 'revisor.request' || Route::currentRouteName() == 'announcement.create') active @endif dropdown-toggle"
                                 href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ __('ui.Ciao') }}, {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu">
                                 @if (!Auth::user()->is_revisor)
-                                    <li><a class="dropdown-item"
+                                    <li><a class="dropdown-item fw-bold"
                                             href="{{ route('revisor.request') }}">{{ __('ui.Diventa revisore') }}</a></li>
                                 @endif
-                                <li><a class="dropdown-item"
+                                <li><a class="dropdown-item fw-bold"
                                         href="{{ route('announcement.create') }}">{{ __('ui.Crea annuncio') }}</a>
                                 </li>
                                 <li>
                                     {{-- LOGOUT USER --}}
                                     <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                <li><a class="dropdown-item fw-bold" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();document.querySelector('#logout-form').submit()">{{ __('ui.Esci') }}</a>
                                 </li>
                                 <form action="{{ route('logout') }}" class="d-none" id="logout-form" method="POST">
@@ -92,7 +91,7 @@
                                     <hr class="dropdown-divider">
                                 </li>
                                 {{-- DELETE USER --}}
-                                <li><a class="dropdown-item" href="{{ route('user.destroy') }}"
+                                <li><a class="dropdown-item fw-bold " href="{{ route('user.destroy') }}"
                                         onclick="event.preventDefault();document.querySelector('#form-destroy').submit()">{{ __('ui.Cancella il tuo profilo') }}</a>
                                 </li>
                                 <form action="{{ route('user.destroy') }}" id="form-destroy" method="POST" class="d-none">
@@ -108,7 +107,7 @@
                     method="GET">
                     <input class="form-control me-2 searchResize" type="search" placeholder="Search"
                         aria-label="Search" name="query">
-                    <button class="button-74 searchResize" type="submit">{{ __('ui.Cerca') }}</button>
+                    <button class="button-74 searchResize fw-bold" type="submit">{{ __('ui.Cerca') }}</button>
                 </form>
 
                 <div class="nav-item dropdown lang-item">

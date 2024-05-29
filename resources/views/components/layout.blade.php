@@ -9,9 +9,8 @@
         {{-- FONTAWESOME --}}
         <script src="https://kit.fontawesome.com/7d149bc2d8.js" crossorigin="anonymous"></script>
         {{-- FONTS --}}
-        <link href="https://fonts.cdnfonts.com/css/market-deco" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/m-plus-code-latin" rel="stylesheet">
-        <link href="https://fonts.cdnfonts.com/css/safilms-crawford" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/borgen" rel="stylesheet" >
+        <link href="https://fonts.cdnfonts.com/css/ysabeau-sc" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/cyberway-riders" rel="stylesheet">
         {{-- VITE --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])

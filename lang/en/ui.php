@@ -9,7 +9,7 @@
     'Crea qui il tuo annuncio'=>'Create here your annuncement',
     'Crea annuncio'=>'Annuncemente create',
     'Ultimi Annunci'=>'Latest Announcements',
-    'I nostri annunci'=>'Ours Announcements',
+    'I nostri annunci'=>'Our Announcements',
     'Nome Utente'=>'User name',
     'Indirizzo email'=>'Mail Address',
     'Conferma Password'=>'Password confirmation',
@@ -31,6 +31,7 @@
     'Esci'=>'Exit',
     'Cancella il tuo profilo'=>'Delete your profile',
     'Risultati per'=>'Results for',
+    'Dettagli'=>'Details',
     // SEZIONE CATEGORIE
     'Azione'=>'Action',
     'JRPG'=>'JRPG',
@@ -53,4 +54,11 @@
     'Contatti'=>'Contacts',
     "Dettaglio dell'annuncio :"=>'Announcement details :',
     'Vai ai dettagli'=>'Go to details',
+    // SEZIONE NUMERI INCREMENTALI
+    'Un pò di numeri'=>'A few numbers',
+    'Giochi venduti'=>'Games sold',
+    'Clienti soddisfatti'=>'Satisfied customers',
+    "Recensioni ricevute"=>"Reviews received",
+     // PAGINA 404
+     "OOOOOPS! Qualcosa è andato storto!"=>"OOOOOPS! Something went wrong!"
 ];

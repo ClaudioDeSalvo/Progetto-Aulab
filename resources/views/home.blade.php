@@ -24,7 +24,7 @@
     </section>
 
 
-    {{-- VINYL + BTN SECTION --}}
+    {{-- SAMURAI + BTN SECTION --}}
     <div class="container-fluid backgroundVinile ">
         <div class="row">
             <div class="col-4 p-0 " data-aos="fade-right" data-aos-duration="1500">
@@ -43,15 +43,17 @@
     {{-- I NOSTRI NUMERI --}}
     <section class="container-fluid my-5 p-5" id="numbersSection">
         <div class="row justify-content-between bg-darkBlue flex-column-reverse flex-md-row">
-            <div class="col-12">
-                <h2 class="font-title display-2 glitch text-center"> Un pò di numeri </h2>
+            <div class="col-6">
+                <img src="/storage/img/immagineincrementali.png" alt="Immagine numeri incrementali" class="img-fluid"> 
+            </div>
+            <div class="col-6">
+                <h2 class="font-title display-2 glitch text-center"> {{ __('ui.Un pò di numeri') }} </h2>
                 <p class="my-3 fs-4 yellowFont  text-center"><span id="firstNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
-                    Giochi venduti </p>
+                    {{ __('ui.Giochi venduti') }} </p>
                 <p class="my-3 fs-4 yellowFont  text-center"><span id="secondNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
-                    Clienti
-                    soddisfatti</p>
+                    {{ __('ui.Clienti soddisfatti') }} </p>
                 <p class="my-3 fs-4 yellowFont  text-center"><span id="thirdNumber" class="fw-bold fs-1 me-3 yellowFont">0</span>
-                    Recensioni ricevute
+                    {{ __("ui.Recensioni ricevute") }}
                 </p>
             </div>
         </div>
@@ -82,7 +84,7 @@
                                     <p class="card-text">{{ $announcements[$i]->user->name }}</p>
                                 @endif
                                 <a href="{{ route('announcement.show', ['announcement' => $announcements[$i]]) }}"
-                                    class="button-74">Vai ai dettagli</a>
+                                    class="button-74">{{ __('ui.Dettagli') }}</a>
                             </div>
                         </div>
                     </div>

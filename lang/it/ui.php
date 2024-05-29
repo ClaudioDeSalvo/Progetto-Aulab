@@ -31,6 +31,7 @@
     'Esci'=>'Esci',
     'Cancella il tuo profilo'=>'Cancella il tuo profilo',
     'Risultati per'=>'Risultati per',
+    'Dettagli'=>'Dettagli',
     // SEZIONE CATEGORIE
     'Azione'=>'Azione',
     'JRPG'=>'JRPG',
@@ -53,4 +54,12 @@
     'Contatti'=>'Contatti',
     "Dettaglio dell'annuncio :"=>"Dettaglio dell'annuncio :",
     'Vai ai dettagli'=>'Vai ai dettagli',
+    // SEZIONE NUMERI INCREMENTALI
+    "Un pò di numeri"=>"Un pò di numeri",
+    'Giochi venduti'=>'Giochi venduti',
+    'Clienti soddisfatti'=>'Clienti soddisfatti',
+    'Recensioni ricevute'=>'Recensioni ricevute',
+    // PAGINA 404
+    "OOOOOPS! Qualcosa è andato storto!"=>"OOOOOPS! Qualcosa è andato storto!"
+
 ];
