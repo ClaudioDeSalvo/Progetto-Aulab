@@ -5,6 +5,26 @@
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="/storage/img/logoblack.png" class="imgNav" alt="">
             </a>
+            <div class="nav-item dropdown lang-item d-flex d-lg-none">
+                <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    @if (__('ui.Articoli') == 'Articoli')
+                        <img src="{{ asset('vendor/blade-flags/language-' . 'it' . '.svg') }}" alt=""
+                            width="32" height="32" class="" />
+                    @elseif (__('ui.Articoli') == 'Artículos')
+                        <img src="{{ asset('vendor/blade-flags/language-' . 'es' . '.svg') }}" alt=""
+                            width="32" height="32" class="" />
+                    @elseif (__('ui.Articoli') == 'Articles')
+                        <img src="{{ asset('vendor/blade-flags/language-' . 'en' . '.svg') }}" alt=""
+                            width="32" height="32" class="" />
+                    @endif
+                </button>
+                <ul class="dropdown-menu dropdown-custom">
+                    <li class="@if (__('ui.Articoli') == 'Articles') d-none @endif"><x-_local lang="en" /></li>
+                    <li class="@if (__('ui.Articoli') == 'Artículos') d-none @endif"><x-_local lang="es" /></li>
+                    <li class="@if (__('ui.Articoli') == 'Articoli') d-none @endif"><x-_local lang="it" /></li>
+                </ul>
+            </div>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -112,7 +132,7 @@
 
                 <div class="nav-item dropdown lang-item d-none d-lg-block">
 
-                    <button class="btnlocal" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
                         @if (__('ui.Articoli') == 'Articoli')
                             <img src="{{ asset('vendor/blade-flags/language-' . 'it' . '.svg') }}" alt=""
                                 width="32" height="32" class="" />

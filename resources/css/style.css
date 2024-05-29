@@ -176,6 +176,7 @@ h1 {
     --bs-dropdown-item-padding-x: 0;
     --bs-dropdown-padding-y: 0;
     --bs-dropdown-padding-x: 0;
+    background-color: var(--aulab-yellow);
 }
 
 .dropdown-menu {
@@ -195,6 +196,8 @@ h1 {
 .btnlocal {
     border: none;
     background-color: var(--aulab-yellow);
+    padding: 0px 12px 0px 12px;
+    border-radius:5px;
 }
 
 
