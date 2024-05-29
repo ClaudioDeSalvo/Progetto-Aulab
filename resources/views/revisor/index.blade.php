@@ -28,9 +28,9 @@
         </div>
     </div>
     @if ($announcement_to_check)
-        <div class="container-fluid d-flex">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-4 text-center">
+                <div class="col-12 col-md-6 text-center">
                     <div id="carouselExample" class="carousel slide">
                         <div class="carousel-inner">
                             @foreach ($announcement_to_check->images as $key => $image)
@@ -87,10 +87,10 @@
                         @endif
                     </div>
                 </div>
-            </div>
 
-            <div class="col-12 col-md-4 mt-4 d-flex flex-column align-items-center">
-                <div class="d-flex flex-column justify-content-center">
+
+                <div class="col-12 col-md-4 mt-4 d-flex flex-column">
+
                     <h1>{{ __('ui.Titolo') }} : {{ $announcement_to_check->title }}</h1>
                     <h2>{{ __('ui.Sottotitolo') }} : {{ $announcement_to_check->subtitle }}</h2>
                     @if ($announcement_to_check->user_id != null)
@@ -99,19 +99,23 @@
                     <h4>{{ __('ui.Prezzo') }} {{ $announcement_to_check->price }} €</h4>
                     <h4># {{ $announcement_to_check->category->name }}</h4>
                     <p>{{ $announcement_to_check->body }}</p>
+                    <div class="d-flex pb-4 justify-content-evenly">
+                        <form action="{{ route('accept', ['announcement' => $announcement_to_check]) }}"
+                            method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="button-74 mx-5 mt-4">{{ __('ui.Approva') }}</button>
+                        </form>
+                        <form action="{{ route('reject', ['announcement' => $announcement_to_check]) }}"
+                            method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="button-74 mx-5 mt-4">{{ __('ui.Rifiuta') }}</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="d-flex pb-4 justify-content-around">
-                    <form action="{{ route('accept', ['announcement' => $announcement_to_check]) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="button-74 mx-5 mt-4">{{ __('ui.Approva') }}</button>
-                    </form>
-                    <form action="{{ route('reject', ['announcement' => $announcement_to_check]) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="button-74 mx-5 mt-4">{{ __('ui.Rifiuta') }}</button>
-                    </form>
-                </div>
+
+
             </div>
         @else
             <div class="row justify-content-center align-items-center text-center">
@@ -121,7 +125,6 @@
                 </div>
             </div>
     @endif
-    </div>
     </div>
 
     {{-- @if ($announcement_to_check)
