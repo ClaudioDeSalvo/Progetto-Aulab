@@ -20,27 +20,27 @@ class RevisorController extends Controller
     public function accept(Announcement $announcement){
         $announcement->setAccepted(true);
         $announcement->setUpdated();
-        return redirect()->back()->with('message', "L'annuncio $announcement->title è stato accettato");
+        return redirect()->back()->with('message', "$announcement->title ".__('ui.Annuncio accettato'));
     }
 
     public function reject(Announcement $announcement){
         $announcement->setAccepted(false);
         $announcement->setUpdated();
-        return redirect()->back()->with('error', "L'annuncio $announcement->title è stato rifiutato");
+        return redirect()->back()->with('error', "$announcement->title ".__('ui.Annuncio rifiutato'));
     }
 
     public function reset(){
         $announcement = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->orderBy('updated_at', 'desc')->first();        
         $announcement->setAccepted(null);
-        return redirect()->back()->with('message', "L'annuncio $announcement->title è stato resettato");
+        return redirect()->back()->with('message', "$announcement->title ".__('ui.Annuncio resettato'));
     }
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->route('home')->with('message', 'Hai fatto richiesta come revisore');
+        return redirect()->route('home')->with('message', __('ui.Richiesta revisore'));
     }
 
     public function makeRevisor(User $user){
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
-        return redirect()->route('home')->with('message', "Hai accettato $user->name come revisore");
+        return redirect()->route('home')->with('message', "$user->name ".__('ui.Revisore approvato'));
     }
 }

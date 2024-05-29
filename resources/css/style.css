@@ -345,6 +345,9 @@ h2 {
 .searchResize {
     height: 35px;
 }
+.search-width{
+    max-width: 300px;
+}
 
 /* FOOTER */
 footer {

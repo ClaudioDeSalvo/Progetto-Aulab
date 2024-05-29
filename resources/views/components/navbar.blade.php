@@ -123,10 +123,9 @@
                     @endguest
                 </ul>
                 {{-- SEARCH ZONE --}}
-                <form class="d-flex mx-3 mt-3" role="search" action="{{ route('announcement.search') }}"
+                <form class="d-flex ms-0 mt-3" role="search" action="{{ route('announcement.search') }}"
                     method="GET">
-                    <input class="form-control me-2 searchResize" type="search" placeholder="Search"
-                        aria-label="Search" name="query">
+                    <input class="form-control me-2 search-width searchResize" type="search"  name="query">
                     <button class="button-74 searchResize fw-bold" type="submit">{{ __('ui.Cerca') }}</button>
                 </form>
 

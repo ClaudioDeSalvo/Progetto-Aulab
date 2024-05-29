@@ -10,7 +10,7 @@
                         class="form-control @error('title') is-invalid @enderror" name="title">
                     <div>
                         @error('title')
-                            <span class="error bg-danger">{{ $message }}</span>
+                            <span class="error bg-warning">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                         class="form-control @error('subtitle') is-invalid @enderror" name="subtitle">
                     <div>
                         @error('subtitle')
-                            <span class="error bg-danger">{{ $message }}</span>
+                            <span class="error bg-warning">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                         id="" cols="30" rows="10"></textarea>
                     <div>
                         @error('body')
-                            <span class="error bg-danger">{{ $message }}</span>
+                            <span class="error bg-warning">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         class="form-control @error('price') is-invalid @enderror" name="price">
                     <div>
                         @error('price')
-                            <span class="error bg-danger">{{ $message }}</span>
+                            <span class="error bg-warning">{{ $message }}</span>
                         @enderror
                     </div>
                 </div>
@@ -51,10 +51,10 @@
 
                     <div>
                         @error('temporary_imgs.*')
-                            <span class="error bg-danger">{{ $message }}</span>
+                            <span class="error bg-warning">{{ $message }}</span>
                         @enderror
                         @error('temporary_imgs')
-                            <span class="error bg-danger">{{ $message }}</span>
+                            <span class="error bg-warning">{{ $message }}</span>
                         @enderror
                     </div>
                     <div id="uploadSwitch" class="row d-none justify-content-center position-relative">
@@ -83,10 +83,14 @@
                 </div>
                 <div class="mb-3">
                     <select wire:model="category_id">
+                        <option selected hidden>{{__('ui.Scegli la categoria')}}</option>
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">{{ __("ui.$category->name") }}</option>
                         @endforeach
                     </select>
+                    @error('category_id')
+                            <span class="error bg-warning">{{ $message }}</span>
+                    @enderror
                 </div>
                 <button scrollY() id="btnCustom" type="submit" class="button-74">{{ __('ui.Invia') }}</button>
             </form>

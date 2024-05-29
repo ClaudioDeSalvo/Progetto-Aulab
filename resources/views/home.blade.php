@@ -67,7 +67,7 @@
             </div>
             @if (count($announcements) == 0)
                 <div class="col-12">
-                    <h2 class="text-center">Non ci sono annunci</h2>
+                    <h2 class="text-center">{{__('ui.Nessun annuncio')}}</h2>
                 </div>
             @else
                 @for ($i = 0; $i < count($announcements); $i++)

@@ -32,6 +32,7 @@
     'Cancella il tuo profilo'=>'Delete your profile',
     'Risultati per'=>'Results for',
     'Dettagli'=>'Details',
+    'Nessun annuncio'=>'No listings available',
     // SEZIONE CATEGORIE
     'Azione'=>'Action',
     'JRPG'=>'JRPG',
@@ -60,5 +61,12 @@
     'Clienti soddisfatti'=>'Satisfied customers',
     "Recensioni ricevute"=>"Reviews received",
      // PAGINA 404
-     "OOOOOPS! Qualcosa è andato storto!"=>"OOOOOPS! Something went wrong!"
+    "OOOOOPS! Qualcosa è andato storto!"=>"OOOOOPS! Something went wrong!",
+     //messages
+    "Annuncio accettato"=>"was approved",
+    "Annuncio rifiutato"=>"was rejected",
+    "Annuncio resettato"=>"was resetted",
+    "Richiesta revisore"=>"Request sent correctly",
+    "Revisore approvato"=>"U became a reviewer",
+    "Scegli la categoria" =>"Choose the category",
 ];

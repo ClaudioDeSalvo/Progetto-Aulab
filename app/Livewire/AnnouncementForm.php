@@ -32,18 +32,6 @@ class AnnouncementForm extends Component
         'category_id' => 'required|exists:categories,id', // Limit image size to 1MB
 
     ];
-    protected $messages = [
-        'title.required' => 'Il campo titolo è richiesto',
-        'title.min' => 'Il campo titolo è troppo corto',
-        'subtitle.required' => 'Il campo sottotitolo è richiesto',
-        'subtitle.min' => 'Il campo sottotitolo è troppo corto',
-        'price.required' => 'Il campo prezzo è richiesto',
-        'price.min' => 'Il campo prezzo è troppo basso',
-        'body.required' => 'Il campo corpo è richiesto',
-        'body.min' => 'Il campo corpo è troppo corto',
-        'category_id.required' => 'Il campo categoria è richiesto',
-        'category_id.exists' => 'La categoria selezionata non esiste',
-    ];
 
     public function updated($propertyName)
     {
