@@ -1,18 +1,4 @@
 <div class="container pb-4">
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    @if (session('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
     <h1 class="text-center my-5 pt-5">{{ __('ui.Crea annuncio') }}</h1>
     <div id="announcementCreate" class="row justify-content-center align-item-center">
         <div class="col-8 creationForm rounded">

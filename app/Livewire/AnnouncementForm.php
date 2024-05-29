@@ -103,8 +103,7 @@ class AnnouncementForm extends Component
         File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
 
-        session()->flash('message', 'Annuncio inserito con successo!');
-        $this->reset();
+        return redirect()->route('home')->with('message', 'Annuncio inserito con successo!');
     }
 
 
