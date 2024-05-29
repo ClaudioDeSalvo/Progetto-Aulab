@@ -63,6 +63,7 @@
      // PAGINA 404
     "OOOOOPS! Qualcosa è andato storto!"=>"OOOOOPS! Something went wrong!",
      //messages
+    "Annuncio approvato" => "Listing approved",
     "Annuncio accettato"=>"was approved",
     "Annuncio rifiutato"=>"was rejected",
     "Annuncio resettato"=>"was resetted",

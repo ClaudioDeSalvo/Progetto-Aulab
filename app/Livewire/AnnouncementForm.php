@@ -91,7 +91,7 @@ class AnnouncementForm extends Component
         File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
 
-        return redirect()->route('home')->with('message', 'Annuncio inserito con successo!');
+        return redirect()->route('home')->with('message', __('ui.Annuncio approvato'));
     }
 
 
